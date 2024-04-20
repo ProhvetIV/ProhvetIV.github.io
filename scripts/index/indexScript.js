@@ -13,7 +13,6 @@ export async function login() {
 		const response = await fetch("https://01.kood.tech/api/auth/signin", {
 			method: "POST",
 			headers: {
-				"Content-Type": "application/json",
 				Authorization: "Basic " + userCredentials,
 			},
 			body: JSON.stringify({ query, creds }),
