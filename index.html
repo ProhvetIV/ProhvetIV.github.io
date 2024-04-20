@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/index.css" />
+		<title>Login</title>
+	</head>
+	<body class="flex">
+		<main class="flex">
+			<section id="login" class="flex">
+				<h1>LOGIN</h1>
+				<form id="login-form" class="flex">
+					<input id="email-or-username" type="text" class="input-text" placeholder="Email or Username" required />
+					<input id="password" type="password" class="input-text" placeholder="Password" required />
+					<input id="login-submit" type="button" value="LOGIN" />
+				</form>
+			</section>
+		</main>
+		<script type="module">
+			import { login } from "./scripts/index/indexScript.js";
+
+			const loginSubmit = document.getElementById("login-submit");
+			loginSubmit.addEventListener("click", () => login());
+			window.addEventListener("keydown", (e) => {
+				if (e.key == "Enter") {
+					login();
+				}
+			});
+		</script>
+	</body>
+</html>

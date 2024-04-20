@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "lato", sans-serif;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+#login {
+	height: 60vh;
+	width: 35vw;
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 2rem;
+}
+
+h1 {
+	color: white;
+}
+
+#login-form {
+	width: 70%;
+}
+
+.input-text {
+	padding: 1rem;
+	width: 100%;
+	border-radius: 10px;
+}
+
+input[type="button"] {
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+}
