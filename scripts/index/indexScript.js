@@ -4,7 +4,6 @@ export async function login() {
 	const password = document.getElementById("password").value;
 
 	const userCredentials = encrypt(emailOrUsername) + ":" + encrypt(password);
-	console.log(userCredentials);
 
 	try {
 		const response = await fetch("https://01.kood.tech/api/auth/signin", {
