@@ -6,13 +6,14 @@ export async function login() {
 	// Get query and creds for the GraphQL request.
 	// Encrypt credentials.
 	const { query, creds } = getQueryAndCreds(emailOrUsername, password);
-	const userCredentials = encrypt(emailOrUsername) + ":" + encrypt(password);
+	const userCredentials = encrypt(emailOrUsername + ":" + password); //+ ":" + encrypt(password);
 
 	// Fetch the data.
 	try {
 		const response = await fetch("https://01.kood.tech/api/auth/signin", {
 			method: "POST",
 			headers: {
+				"Content-Type": "application/json",
 				Authorization: "Basic " + userCredentials,
 			},
 			body: JSON.stringify({ query, creds }),
