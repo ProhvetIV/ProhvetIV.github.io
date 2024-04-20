@@ -55,7 +55,7 @@ function getQueryAndCreds(emailOrUsername, password) {
 			email: emailOrUsername,
 			password: password,
 		};
-		query = `
+		let query = `
 			mutation signin($email: String!, $password: String!) {
 				signin(email: $email, password: $password) {
 					token
