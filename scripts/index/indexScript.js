@@ -14,7 +14,7 @@ export async function login() {
 			credentials: "include",
 			headers: {
 				Authorization: "Basic " + userCredentials,
-				"Access-Control-Allow-Origin": "http://localhost:5500",
+				"Access-Control-Allow-Origin": "ProhvetIV.github.io",
 			},
 		});
 

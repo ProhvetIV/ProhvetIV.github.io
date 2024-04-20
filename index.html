@@ -22,7 +22,7 @@
 
 			const loginSubmit = document.getElementById("login-submit");
 			loginSubmit.addEventListener("click", () => login());
-			loginSubmit.addEventListener("keydown", (e) => {
+			window.addEventListener("keydown", (e) => {
 				if (e.key == "Enter") {
 					login();
 				}
