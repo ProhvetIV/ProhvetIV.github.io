@@ -23,7 +23,7 @@ export function checkSessionExpiration(address) {
 		window.location.href = "index.html";
 	}
 
-	const expirationTime = parseInt(JSON.parse(token).expires);
+	const expirationTime = parseInt(JSON.parse(token)["expires"]);
 	console.log(expirationTime);
 
 	if (expirationTime) {
@@ -46,7 +46,7 @@ export function loginTokenCheck() {
 	const token = sessionStorage.getItem("JWT");
 
 	if (token) {
-		const expirationTime = parseInt(JSON.parse(token).expires);
+		const expirationTime = parseInt(JSON.parse(token)["expires"]);
 		const now = Date.now();
 
 		if (now < expirationTime) {
