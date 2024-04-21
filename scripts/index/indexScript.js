@@ -1,5 +1,8 @@
+import { createSessions, checkSessionExpiration } from "../sessions.js";
+
 // Login function to fetch the signin JWT.
 export async function login() {
+	checkSessionExpiration();
 	const emailOrUsername = document.getElementById("email-or-username").value;
 	const password = document.getElementById("password").value;
 

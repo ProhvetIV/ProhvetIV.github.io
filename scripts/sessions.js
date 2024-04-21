@@ -1,4 +1,4 @@
-function createSessions(JWT) {
+export function createSessions(JWT) {
 	sessionStorage.setItem("JWT", JSON.stringify({ value: JWT, expires: createExpirationForSession(10) }));
 }
 
@@ -13,7 +13,7 @@ function createExpirationForSession(minutes) {
 // Checks if there is a "JWT" session with an "expires" field. If true, compares
 // it to current time. If current time is bigger than expires time, removes the
 // session and navigates back to index.html.
-function checkSessionExpiration() {
+export function checkSessionExpiration() {
 	const expirationTime = parseInt(JSON.parse(sessionStorage.getItem("JWT")).expires);
 	console.log(expirationTime);
 
@@ -27,6 +27,6 @@ function checkSessionExpiration() {
 }
 
 // Remove sessions. For logout and expired sessions.
-function removeSessions() {
+export function removeSessions() {
 	sessionStorage.removeItem("JWT");
 }
