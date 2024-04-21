@@ -49,7 +49,7 @@ export function loginTokenCheck() {
 	const token = sessionStorage.getItem("JWT");
 
 	if (token) {
-		const expirationTime = parseInt(JSON.parse(token).expires);
+		const expirationTime = new Date(JSON.parse(token).expires);
 		const now = Date.now();
 
 		if (now < expirationTime) {
