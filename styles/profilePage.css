@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-nav {
+header {
 	background-color: rgba(0, 0, 0, 0.1);
 	height: 10vh;
 	display: flex;
@@ -12,8 +12,12 @@ nav {
 	justify-content: space-evenly;
 }
 
+nav {
+}
+
 body {
 	width: 100vw;
+	min-height: 90vh;
 	font-family: "Roboto", sans-serif;
 }
 
