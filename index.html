@@ -20,19 +20,11 @@
 		</main>
 		<script type="module">
 			import { login } from "./scripts/index/index.js";
-			import { checkSessionExpiration } from "./scripts/sessions.js";
+			import { addListeners } from "./scripts/index/listeners.js";
+			import { checkSessionExpiration, loginTokenCheck } from "./scripts/sessions.js";
 
-			if (sessionStorage.getItem("JWT")) {
-				window.location.href = "profile.html";
-			}
-
-			const loginSubmit = document.getElementById("login-submit");
-			loginSubmit.addEventListener("click", () => login());
-			window.addEventListener("keydown", (e) => {
-				if (e.key == "Enter") {
-					login();
-				}
-			});
+			loginTokenCheck();
+			addListeners();
 		</script>
 	</body>
 </html>

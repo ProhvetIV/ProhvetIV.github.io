@@ -35,3 +35,20 @@ export function checkSessionExpiration() {
 export function removeSessions() {
 	sessionStorage.removeItem("JWT");
 }
+
+// In login.html, checks if there is a token and if the token is not expired,
+// then it will redirect to profile.html.
+export function loginTokenCheck() {
+	const token = sessionStorage.getItem("JWT");
+
+	if (token) {
+		const expirationTime = parseInt(JSON.parse(token).expires);
+		const now = Date.now();
+
+		if (now < expirationTime) {
+			window.location.href = "profile.html";
+		} else {
+			removeSessions();
+		}
+	}
+}
