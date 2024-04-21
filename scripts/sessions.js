@@ -14,7 +14,12 @@ function createExpirationForSession(minutes) {
 // it to current time. If current time is bigger than expires time, removes the
 // session and navigates back to index.html.
 export function checkSessionExpiration() {
-	const expirationTime = parseInt(JSON.parse(sessionStorage.getItem("JWT")).expires);
+	const token = sessionStorage.getItem("JWT");
+	if (token === null) {
+		return;
+	}
+
+	const expirationTime = parseInt(JSON.parse(token).expires);
 	console.log(expirationTime);
 
 	if (expirationTime) {
