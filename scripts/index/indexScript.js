@@ -19,19 +19,20 @@ export async function login() {
 			body: JSON.stringify({ query, creds }),
 		});
 
-		console.log(response);
-
 		if (!response.ok) {
+			console.log("Failed response: ", response);
 			throw new Error("Failed to fetch data");
 		}
 
-		const responseData = await response.json();
-		console.log(responseData);
-
-		const token = responseData.data.signin.token;
-		console.log("Token: ", token);
+		// Successful fetching
+		if (response.ok) {
+			const responseData = await response.json();
+			console.log(responseData);
+			createSessions(responseData);
+			window.location.href = "profile.html";
+		}
 	} catch (error) {
-		console.log(error);
+		console.log("Failed to fetch from kood/jõhvi: ", error);
 	}
 }
 
@@ -41,7 +42,7 @@ function encrypt(input) {
 	return encryptedPW;
 }
 
-// Checks whether username is email or not. If true, then email.
+// Checks whether input is an email type.
 function emailValidation(email) {
 	const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 	return regex.test(email);
