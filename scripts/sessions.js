@@ -23,6 +23,9 @@ export function checkSessionExpiration(address) {
 		window.location.href = "index.html";
 	}
 
+	const expires = token.expires;
+	console.log(expires);
+
 	const expirationTime = parseInt(JSON.parse(token)["expires"]);
 	console.log(expirationTime);
 
