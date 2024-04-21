@@ -22,7 +22,9 @@
 			import { login } from "./scripts/index/index.js";
 			import { checkSessionExpiration } from "./scripts/sessions.js";
 
-			checkSessionExpiration("login");
+			if (sessionStorage.getItem("JWT")) {
+				window.location.href = "profile.html";
+			}
 
 			const loginSubmit = document.getElementById("login-submit");
 			loginSubmit.addEventListener("click", () => login());
