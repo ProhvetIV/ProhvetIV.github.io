@@ -13,10 +13,14 @@ function createExpirationForSession(minutes) {
 // Checks if there is a "JWT" session with an "expires" field. If true, compares
 // it to current time. If current time is bigger than expires time, removes the
 // session and navigates back to index.html.
-export function checkSessionExpiration() {
+export function checkSessionExpiration(address) {
 	const token = sessionStorage.getItem("JWT");
 	if (token === null) {
 		return;
+	}
+
+	if (token === null && address === "profile") {
+		window.location.href = "index.html";
 	}
 
 	const expirationTime = parseInt(JSON.parse(token).expires);
