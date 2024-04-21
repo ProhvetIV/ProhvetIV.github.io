@@ -19,16 +19,13 @@ export function checkSessionExpiration(address) {
 		return;
 	}
 
+	// If no session and in profile page, navigate to index.html.
 	if (token === null && address === "profile") {
 		window.location.href = "index.html";
+		return;
 	}
 
-	console.log(JSON.parse(token));
-	console.log(JSON.parse(token).expires);
-
 	const expirationTime = new Date(JSON.parse(token).expires);
-	console.log(expirationTime);
-
 	if (expirationTime) {
 		const now = Date.now();
 		if (now > expirationTime) {
