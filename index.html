@@ -20,6 +20,9 @@
 		</main>
 		<script type="module">
 			import { login } from "./scripts/index/index.js";
+			import { checkSessionExpiration } from "./scripts/sessions.js";
+
+			checkSessionExpiration("login");
 
 			const loginSubmit = document.getElementById("login-submit");
 			loginSubmit.addEventListener("click", () => login());
