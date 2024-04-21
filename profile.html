@@ -8,9 +8,17 @@
 		<title>Profile Page</title>
 	</head>
 	<body>
+		<header>
+			<select name="modules" id="modules">
+				<option value="Piscine GO">Piscine GO</option>
+				<option value="Div 01" selected>Div 01</option>
+				<option value="Piscine JS">Piscine JS</option>
+			</select>
+			<button value="LOG OUT"></button>
+		</header>
+		<main id="main"></main>
 		<script type="module">
 			import { profilePage } from "./scripts/profile/profilePage.js";
-
 			profilePage();
 		</script>
 	</body>

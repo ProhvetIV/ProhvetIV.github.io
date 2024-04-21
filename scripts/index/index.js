@@ -29,7 +29,6 @@ export async function login() {
 		// Successful fetching
 		if (response.ok) {
 			const responseData = await response.json();
-			console.log(responseData);
 			createSessions(responseData);
 			window.location.href = "profile.html";
 		}

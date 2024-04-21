@@ -4,9 +4,16 @@
 	box-sizing: border-box;
 }
 
+nav {
+	background-color: rgba(0, 0, 0, 0.1);
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
 body {
 	width: 100vw;
-	height: 100vh;
 	font-family: "Roboto", sans-serif;
 }
 
