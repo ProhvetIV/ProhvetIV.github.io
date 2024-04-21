@@ -1,4 +1,4 @@
-import { createSessions, checkSessionExpiration } from "../sessions.js";
+import { createSessions } from "../sessions.js";
 
 // Login function to fetch the signin JWT.
 export async function login() {
