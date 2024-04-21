@@ -5,7 +5,7 @@
 }
 
 header {
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: rgba(0, 0, 0, 0.062);
 	height: 10vh;
 	display: flex;
 	align-items: center;
@@ -17,6 +17,7 @@ nav {
 
 body {
 	font-family: "Roboto", sans-serif;
+	background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
 }
 
 h1,
@@ -31,5 +32,4 @@ h6 {
 main {
 	width: 100vw;
 	height: 90vh;
-	background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
 }
