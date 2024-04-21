@@ -24,8 +24,9 @@ export function checkSessionExpiration(address) {
 	}
 
 	console.log(JSON.parse(token));
+	console.log(JSON.parse(token).expires);
 
-	const expirationTime = parseInt(JSON.parse(token)["expires"]);
+	const expirationTime = new Date(JSON.parse(token)["expires"]);
 	console.log(expirationTime);
 
 	if (expirationTime) {
