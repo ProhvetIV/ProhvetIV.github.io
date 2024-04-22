@@ -37,16 +37,17 @@ main {
 }
 
 .btn {
-	width: 150px;
-	height: 60px;
+	width: 180px;
+	height: 50px;
 	border-radius: 50px;
-	background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
-	box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+	background-image: white;
+	box-shadow: 0 20px 20px -6px rgba(109, 132, 175, 0.5);
 	outline: none;
 	cursor: pointer;
 	border: none;
 	font-size: 24px;
-	color: white;
+	color: #1d3158;
+	font-weight: bold;
 }
 
 .btn:hover {
@@ -56,4 +57,10 @@ main {
 
 .btn:active {
 	opacity: 0.5;
+}
+/* Buttons end */
+
+#modules {
+	width: 300px;
+	padding-left: 20px;
 }
