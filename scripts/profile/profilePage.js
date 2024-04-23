@@ -10,7 +10,7 @@ export async function profilePage() {
 async function userInfo() {
 	try {
 		const info = await fetch("https://01.kood.tech/api/graphql-engine/v1/graphql", {
-			method: "GET",
+			method: "POST",
 			headers: {
 				Authorization: "Bearer: " + sessionStorage.getItem("JWT")["value"],
 			},
@@ -31,7 +31,7 @@ async function graphInfo() {
 
 	try {
 		const info = await fetch("https://01.kood.tech/api/graphql-engine/v1/graphql", {
-			method: "GET",
+			method: "POST",
 			headers: {
 				Authorization: "Bearer " + sessionStorage.getItem("JWT")["value"],
 			},
