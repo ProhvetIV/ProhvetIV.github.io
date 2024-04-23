@@ -40,17 +40,17 @@ function getXP(xps) {
 	let piscineGO;
 	let piscineJS;
 
-	for (let i = 0; i < xps.length; i++) {
-		if (xps[i].path.includes("piscine-js")) {
-			piscineGO += xps[i].amount;
-			continue;
-		}
-		if (xps[i].path.includes("piscine-go")) {
-			piscineJS += xps[i].amount;
-			continue;
-		}
-		if (xps[i].path.includes("div-01")) div01XP += xps[i].amount;
-	}
+	//for (let i = 0; i < xps.length; i++) {
+	//	if (xps[i].path.includes("piscine-js")) {
+	//		piscineGO += xps[i].amount;
+	//		continue;
+	//	}
+	//	if (xps[i].path.includes("piscine-go")) {
+	//		piscineJS += xps[i].amount;
+	//		continue;
+	//	}
+	//	if (xps[i].path.includes("div-01")) div01XP += xps[i].amount;
+	//}
 
 	// Return the xp values.
 	return { div01XP, piscineGO, piscineJS };
