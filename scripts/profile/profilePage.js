@@ -13,10 +13,10 @@ export async function profilePage() {
 		if (uInfo) {
 			placeName(`${uInfo.firstName} "${uInfo.login}" ${uInfo.lastName}`);
 			placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
-			const { div01, piscineGO, piscineJS } = getXP(uInfo.xps);
-			console.log(div01, piscineGO, piscineJS);
+			const { div01XP, piscineGO, piscineJS } = getXP(uInfo.xps);
+			console.log(div01XP, piscineGO, piscineJS);
 			console.log(getXP(uInfo.xps));
-			placeXP(div01, piscineGO, piscineJS);
+			placeXP(div01XP, piscineGO, piscineJS);
 		}
 	} catch (error) {
 		console.log("Error fetching data: ", error);

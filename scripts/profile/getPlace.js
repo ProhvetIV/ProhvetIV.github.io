@@ -41,11 +41,11 @@ function getXP(xps) {
 
 	for (let i = 0; i < xps.length; i++) {
 		var module = xps[i].path;
-		if (module.includes("piscine-js")) {
+		if (module.includes("piscine-go")) {
 			piscineGO += xps[i].amount;
 			continue;
 		}
-		if (xps[i].path.includes("piscine-go")) {
+		if (xps[i].path.includes("piscine-js")) {
 			piscineJS += xps[i].amount;
 			continue;
 		}
