@@ -37,7 +37,7 @@ async function userInfo() {
 
 		const data = await info.json();
 		console.log(data);
-		const userData = data.user;
+		const userData = data.data.user;
 		console.log(userData);
 
 		return userData;
