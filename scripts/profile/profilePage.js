@@ -14,6 +14,7 @@ export async function profilePage() {
 			placeName(`${uInfo.firstName} "${uInfo.login}" ${uInfo.lastName}`);
 			placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
 			const { div01, piscineGO, piscineJS } = getXP(uInfo.xps);
+			console.log(div01, piscineGO, piscineJS);
 			placeXP(div01, piscineGO, piscineJS);
 		}
 	} catch (error) {
