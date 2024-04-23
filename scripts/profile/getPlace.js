@@ -37,9 +37,9 @@ function getXP(xps) {
 	console.log(xps);
 	console.log(xps[0].path);
 	console.log(typeof xps[0].path);
-	let div01XP;
-	let piscineGO;
-	let piscineJS;
+	let div01XP = 0;
+	let piscineGO = 0;
+	let piscineJS = 0;
 
 	for (let i = 0; i < xps.length; i++) {
 		var module = xps[i].path;
