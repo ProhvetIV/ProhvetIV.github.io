@@ -11,6 +11,8 @@ export async function profilePage() {
 		const gInfo = await graphInfo();
 
 		if (uInfo) {
+			console.log(uInfo);
+			console.log(typeof uInfo);
 			placeName(`${uInfo.firstName} "${uInfo.login}" ${uInfo.lastName}`);
 			placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
 			const { div01, piscineGO, piscineJS } = getXP(uInfo.xps);
