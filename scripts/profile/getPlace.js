@@ -53,6 +53,7 @@ function getXP(xps) {
 	}
 
 	// Return the xp values.
+	console.log(div01XP, piscineGO, piscineJS);
 	return { div01XP, piscineGO, piscineJS };
 }
 
