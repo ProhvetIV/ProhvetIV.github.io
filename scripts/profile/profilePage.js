@@ -5,13 +5,20 @@ import * as queries from "./queries.js";
 // Base func for the profile page.
 export async function profilePage() {
 	checkSessionExpiration("profile");
-	const uInfo = await userInfo();
-	const gInfo = await graphInfo();
 
-	placeName(`${uInfo.firstName} "${uInfo.login}" ${uInfo.lastName}`);
-	placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
-	const { div01, piscineGO, piscineJS } = getXP(uInfo.xps);
-	placeXP(div01, piscineGO, piscineJS);
+	try {
+		const uInfo = await userInfo();
+		const gInfo = await graphInfo();
+
+		if (uInfo) {
+			placeName(`${uInfo.firstName} "${uInfo.login}" ${uInfo.lastName}`);
+			placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
+			const { div01, piscineGO, piscineJS } = getXP(uInfo.xps);
+			placeXP(div01, piscineGO, piscineJS);
+		}
+	} catch (error) {
+		console.log("Error fetching data: ", error);
+	}
 }
 
 // Fetch for user info.
