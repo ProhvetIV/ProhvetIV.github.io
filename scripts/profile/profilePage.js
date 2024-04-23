@@ -1,26 +1,20 @@
 import { checkSessionExpiration } from "../sessions.js";
 import { getXP, placeAudit, placeName, placeXP } from "./getPlace.js";
+import { addLogout } from "./listeners.js";
 import * as queries from "./queries.js";
 
 // Base func for the profile page.
 export async function profilePage() {
 	checkSessionExpiration("profile");
+	addLogout();
 
-	try {
-		const uInfo = await userInfo();
-		const gInfo = await graphInfo();
+	const uInfo = await userInfo();
+	const gInfo = await graphInfo();
 
-		if (uInfo) {
-			placeName(`${uInfo.firstName} "${uInfo.login}" ${uInfo.lastName}`);
-			placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
-			const { div01XP, piscineGO, piscineJS } = getXP(uInfo.xps);
-			console.log(div01XP, piscineGO, piscineJS);
-			console.log(getXP(uInfo.xps));
-			placeXP(div01XP, piscineGO, piscineJS);
-		}
-	} catch (error) {
-		console.log("Error fetching data: ", error);
-	}
+	placeName(`${uInfo.firstName} "${uInfo.login}" ${uInfo.lastName}`);
+	placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
+	const { div01XP, piscineGO, piscineJS } = getXP(uInfo.xps);
+	placeXP(div01XP, piscineGO, piscineJS);
 }
 
 // Fetch for user info.
