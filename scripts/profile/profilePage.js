@@ -9,14 +9,15 @@ export async function profilePage() {
 
 async function userInfo() {
 	const token = JSON.parse(sessionStorage.getItem("JWT"))["value"];
-	console.log(token);
+	const query = queries.userInfoQuery;
+
 	try {
 		const info = await fetch("https://01.kood.tech/api/graphql-engine/v1/graphql", {
 			method: "POST",
 			headers: {
 				Authorization: "Bearer " + token,
 			},
-			body: queries.userInfoQuery,
+			body: JSON.stringify({ query }),
 		});
 
 		const data = await info.json();
@@ -29,7 +30,6 @@ async function userInfo() {
 
 async function graphInfo() {
 	const token = JSON.parse(sessionStorage.getItem("JWT"))["value"];
-	console.log(token);
 
 	const xpQ = queries.xpQuery;
 	const xpV = queries.xpVariables;
