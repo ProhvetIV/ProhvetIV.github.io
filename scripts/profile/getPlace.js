@@ -45,7 +45,7 @@ function getXP(xps) {
 			piscineGO += xps[i].amount;
 			continue;
 		}
-		if (xps[i].path.includes("piscine-js")) {
+		if (module.includes("piscine-js")) {
 			piscineJS += xps[i].amount;
 			continue;
 		}
@@ -53,7 +53,6 @@ function getXP(xps) {
 	}
 
 	// Return the xp values.
-	console.log(div01XP, piscineGO, piscineJS);
 	return { div01XP, piscineGO, piscineJS };
 }
 
