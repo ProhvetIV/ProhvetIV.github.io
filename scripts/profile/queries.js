@@ -39,3 +39,5 @@ const xpQuery = `
 const xpVariables = {
 	where: { type: { _eq: "xp" } },
 };
+
+export { userInfoQuery, xpQuery, xpVariables };

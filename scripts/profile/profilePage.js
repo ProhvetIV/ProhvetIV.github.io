@@ -1,4 +1,5 @@
 import { checkSessionExpiration } from "../sessions.js";
+import * as queries from "./queries.js";
 
 export async function profilePage() {
 	checkSessionExpiration("profile");
@@ -12,7 +13,7 @@ async function userInfo() {
 			headers: {
 				Authorization: "Bearer: " + sessionStorage.getItem("JWT")["value"],
 			},
-			body: userInfoQuery,
+			body: queries.userInfoQuery,
 		});
 
 		const data = await info.json();
