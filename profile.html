@@ -9,6 +9,7 @@
 	</head>
 	<body>
 		<header>
+			<h1 id="name-in-header"></h1>
 			<!-- maybe generate with js and make them buttons -->
 			<select name="modules" id="modules" class="btn">
 				<option value="Piscine GO">Piscine GO</option>
@@ -18,7 +19,14 @@
 			<!-- -------------------------------------------- -->
 			<button id="logout" value="LOG OUT" class="btn">LOG OUT!</button>
 		</header>
-		<main id="main"></main>
+		<main id="main">
+			<h1 id="xp"></h1>
+			<div id="audit">
+				<h1 id="ratio"></h1>
+				<h1 id="up"></h1>
+				<h1 id="down"></h1>
+			</div>
+		</main>
 		<script type="module">
 			import { profilePage } from "./scripts/profile/profilePage.js";
 			profilePage();

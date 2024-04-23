@@ -1,12 +1,20 @@
 import { checkSessionExpiration } from "../sessions.js";
+import { getXP, placeAudit, placeName, placeXP } from "./getPlace.js";
 import * as queries from "./queries.js";
 
+// Base func for the profile page.
 export async function profilePage() {
 	checkSessionExpiration("profile");
 	const uInfo = await userInfo();
 	const gInfo = await graphInfo();
+
+	placeName(`${uInfo.firstName} "${uInfo.login}" ${uInfo.lastName}`);
+	placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
+	const { div01, piscineGO, piscineJS } = getXP(uInfo.xps);
+	placeXP(div01, piscineGO, piscineJS);
 }
 
+// Fetch for user info.
 async function userInfo() {
 	const token = JSON.parse(sessionStorage.getItem("JWT"))["value"];
 	const query = queries.userInfoQuery;
@@ -22,12 +30,15 @@ async function userInfo() {
 
 		const data = await info.json();
 		console.log(data);
-		return data;
+		const userData = data.user[0];
+
+		return userData;
 	} catch (error) {
 		console.log(error);
 	}
 }
 
+// Fetch for graph info.
 async function graphInfo() {
 	const token = JSON.parse(sessionStorage.getItem("JWT"))["value"];
 
@@ -45,6 +56,7 @@ async function graphInfo() {
 
 		const data = await info.json();
 		console.log(data);
+
 		return data;
 	} catch (error) {
 		console.log(error);
