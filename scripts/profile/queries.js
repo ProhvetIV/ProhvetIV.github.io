@@ -1,3 +1,4 @@
+// Query for name, audit ratio and numbers, xp.
 const userInfoQuery = `
     query user {
         user {
@@ -18,7 +19,7 @@ const userInfoQuery = `
 `;
 
 const xpQuery = `
-query transaction($where: transaction_bool_exp) {
+  query transaction($where: transaction_bool_exp) {
     transaction(where: $where) {
       type
       amount
