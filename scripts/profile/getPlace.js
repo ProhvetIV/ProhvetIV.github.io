@@ -34,8 +34,6 @@ function placeXP(div01, go, js, select) {
 
 // Calculate the amount of XP for each piscine and div.
 function getXP(xps) {
-	console.log(xps);
-	console.log(typeof xps);
 	let div01XP;
 	let piscineGO;
 	let piscineJS;
