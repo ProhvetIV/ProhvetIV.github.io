@@ -37,7 +37,8 @@ async function userInfo() {
 
 		const data = await info.json();
 		console.log(data);
-		const userData = data.user[0];
+		const userData = data.user;
+		console.log(userData);
 
 		return userData;
 	} catch (error) {
