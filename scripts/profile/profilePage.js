@@ -15,6 +15,7 @@ export async function profilePage() {
 			placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
 			const { div01, piscineGO, piscineJS } = getXP(uInfo.xps);
 			console.log(div01, piscineGO, piscineJS);
+			console.log(getXP(uInfo.xps));
 			placeXP(div01, piscineGO, piscineJS);
 		}
 	} catch (error) {
