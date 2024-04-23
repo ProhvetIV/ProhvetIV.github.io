@@ -8,7 +8,7 @@ export async function profilePage() {
 }
 
 async function userInfo() {
-	const token = sessionStorage.getItem("JWT")["value"];
+	const token = JSON.parse(sessionStorage.getItem("JWT"))["value"];
 	console.log(token);
 	try {
 		const info = await fetch("https://01.kood.tech/api/graphql-engine/v1/graphql", {
@@ -28,6 +28,9 @@ async function userInfo() {
 }
 
 async function graphInfo() {
+	const token = JSON.parse(sessionStorage.getItem("JWT"))["value"];
+	console.log(token);
+
 	const xpQ = queries.xpQuery;
 	const xpV = queries.xpVariables;
 
@@ -35,7 +38,7 @@ async function graphInfo() {
 		const info = await fetch("https://01.kood.tech/api/graphql-engine/v1/graphql", {
 			method: "POST",
 			headers: {
-				Authorization: "Bearer " + sessionStorage.getItem("JWT")["value"],
+				Authorization: "Bearer " + token,
 			},
 			body: JSON.stringify({ xpQ, xpV }),
 		});
