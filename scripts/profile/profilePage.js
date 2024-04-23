@@ -31,16 +31,16 @@ async function userInfo() {
 async function graphInfo() {
 	const token = JSON.parse(sessionStorage.getItem("JWT"))["value"];
 
-	const xpQ = queries.xpQuery;
-	const xpV = queries.xpVariables;
-
 	try {
 		const info = await fetch("https://01.kood.tech/api/graphql-engine/v1/graphql", {
 			method: "POST",
 			headers: {
 				Authorization: "Bearer " + token,
 			},
-			body: JSON.stringify({ xpQ, xpV }),
+			body: JSON.stringify({
+				query: queries.xpQuery,
+				variables: queries.xpVariables,
+			}),
 		});
 
 		const data = await info.json();
