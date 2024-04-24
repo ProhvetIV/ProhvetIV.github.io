@@ -78,6 +78,7 @@ main {
 .xp-display {
 	height: 100%;
 	width: 18vw;
+	border-radius: 10px;
 	background: radial-gradient(circle, rgba(111, 191, 187, 1) 0%, rgba(129, 123, 223, 1) 100%, rgba(149, 210, 203, 1) 100%);
 	opacity: 0.5;
 }
