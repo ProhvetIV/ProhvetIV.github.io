@@ -1,6 +1,6 @@
 import { checkSessionExpiration } from "../sessions.js";
 import { getLv, getXP, placeAudit, placeLv, placeName, placeXP } from "./getPlace.js";
-import { getPassFail, placePassFail } from "./passFail.js";
+import { getPassFail, placePassFailRatio } from "./passFail.js";
 import { addLogout } from "./listeners.js";
 import * as fetching from "./fetching.js";
 
@@ -24,5 +24,5 @@ export async function profilePage() {
 	placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
 	placeLv(getLv(lInfo));
 	placeXP(div01XP, piscineGO, piscineJS);
-	placePassFail(goExercises, jsExercises);
+	placePassFailRatio(goExercises, jsExercises);
 }

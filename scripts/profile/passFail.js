@@ -60,8 +60,9 @@ function getPassFail(progress) {
 	return { goExercises, jsExercises };
 }
 
-function placePassFail(go, js) {
-	const passFailSection = document.getElementById("pass-fail");
+function placePassFailRatio(go, js) {
+	const goPassFail = document.getElementById("go-pass-fail");
+	const jsPassFail = document.getElementById("js-pass-fail");
 
 	// Create charts for fails.
 
@@ -72,7 +73,7 @@ function placePassFail(go, js) {
 	const goTableH = document.createElement("th");
 	const goTableBody = document.createElement("tbody");
 	goTableH.textContent = "Ratio";
-	passFailSection.appendChild(goTable);
+	goPassFail.appendChild(goTable);
 	goTable.appendChild(goTableHead);
 	goTableHead.appendChild(goTr);
 	goTr.appendChild(goTableH);
@@ -97,7 +98,7 @@ function placePassFail(go, js) {
 	const jsTableH = document.createElement("th");
 	const jsTableBody = document.createElement("tbody");
 	jsTableH.textContent = "Ratio";
-	passFailSection.appendChild(jsTable);
+	jsPassFail.appendChild(jsTable);
 	jsTable.appendChild(jsTableHead);
 	jsTableHead.appendChild(jsTr);
 	jsTr.appendChild(jsTableH);
@@ -117,4 +118,39 @@ function placePassFail(go, js) {
 	}
 }
 
-export { getPassFail, placePassFail };
+function placeFailCharts(go, js) {
+	createFailChart(go, "go-chart");
+	createFailChart(js, "js-chart");
+}
+
+function createFailChart(piscine, chartName) {
+	const piscineChart = document.getElementById(chartName);
+	const svgNS = "http://www.w3.org/2000/svg";
+
+	let counter = 0;
+	for (const [key, value] of Object.entries(piscine)) {
+		const fails = value.fail;
+
+		const bar = document.createElementNS(svgNS, "g");
+		bar.classList.add("bar");
+
+		const rect = document.createElementNS(svgNS, "rect");
+		rect.width = fails * 20;
+		rect.height = 20;
+		rect.y = counter * 20;
+
+		const text = document.createElementNS(svgNS, "text");
+		text.x = fails * 20 + 5;
+		text.y = fails * 20 + 8;
+		text.dy = ".35em";
+		text.textContent = `${key}: ${fails} fail(s)`;
+
+		piscineChart.appendChild(bar);
+		bar.appendChild(rect);
+		bar.appendChild(text);
+
+		counter++;
+	}
+}
+
+export { getPassFail, placePassFailRatio, placeFailCharts };
