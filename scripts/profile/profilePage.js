@@ -1,5 +1,5 @@
 import { checkSessionExpiration } from "../sessions.js";
-import { getXP, placeAudit, placeName, placeXP } from "./getPlace.js";
+import { getLv, getXP, placeAudit, placeName, placeXP } from "./getPlace.js";
 import { addLogout } from "./listeners.js";
 import * as queries from "./queries.js";
 
@@ -16,7 +16,8 @@ export async function profilePage() {
 	placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
 	const { div01XP, piscineGO, piscineJS } = getXP(uInfo.xps);
 	placeXP(div01XP, piscineGO, piscineJS);
-	//getLv()
+	const lvs = getLv(lInfo);
+	placeXP(lvs);
 }
 
 // Fetch for user info.
@@ -84,7 +85,7 @@ async function lvInfo() {
 		});
 
 		const data = await info.json();
-		console.log(data);
+		const lvData = data.data.transaction;
 
 		return data;
 	} catch (error) {
