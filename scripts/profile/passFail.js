@@ -73,6 +73,7 @@ function placePassFail(go, js) {
 	goTable.appendChild(goTr);
 	goTr.appendChild(goTableHeader);
 	for (const [key, value] of Object.entries(go)) {
+		const tr = document.createElement("tr");
 		const td = document.createElement("td");
 		if (value.pass === 0) {
 			td.textContent = 0;
@@ -81,7 +82,8 @@ function placePassFail(go, js) {
 		} else {
 			td.textContent = value.pass / (value.pass + value.fail);
 		}
-		goTable.appendChild(td);
+		goTable.appendChild(tr);
+		tr.appendChild(td);
 	}
 
 	const jsTable = document.createElement("table");
