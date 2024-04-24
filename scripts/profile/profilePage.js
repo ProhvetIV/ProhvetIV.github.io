@@ -14,10 +14,10 @@ export async function profilePage() {
 
 	placeName(`${uInfo.firstName} "${uInfo.login}" ${uInfo.lastName}`);
 	placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
-	const { div01XP, piscineGO, piscineJS } = getXP(uInfo.xps);
-	placeXP(div01XP, piscineGO, piscineJS);
 	const lvs = getLv(lInfo);
 	placeXP(lvs);
+	const { div01XP, piscineGO, piscineJS } = getXP(uInfo.xps);
+	placeXP(div01XP, piscineGO, piscineJS);
 }
 
 // Fetch for user info.
