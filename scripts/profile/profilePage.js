@@ -15,10 +15,14 @@ export async function profilePage() {
 	const gInfo = await fetching.progressInfo();
 	const pfInfo = await fetching.passFailInfo();
 
+	// Necessary variables for displaying data.
+	const { div01XP, piscineGO, piscineJS } = getXP(uInfo.xps);
+	const { goExercises, jsExercises } = getPassFail(pfInfo);
+
 	// Display the data received.
 	placeName(`${uInfo.firstName} "${uInfo.login}" ${uInfo.lastName}`);
 	placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
 	placeLv(getLv(lInfo));
-	placeXP(getXP(uInfo.xps));
-	placePassFail(getPassFail(pfInfo));
+	placeXP(div01XP, piscineGO, piscineJS);
+	placePassFail(goExercises, jsExercises);
 }
