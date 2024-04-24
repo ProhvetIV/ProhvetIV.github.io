@@ -31,7 +31,6 @@ function placeLv(lvObj) {
 	const displays = [...document.querySelectorAll("xp-display")];
 
 	for (let i = 0; i < displays.length; i++) {
-		const display = displays[i];
 		const numbers = document.createElement("span");
 		numbers.textContent = lvObj[i];
 		numbers.id = modules[i] + "-lv";
@@ -41,9 +40,9 @@ function placeLv(lvObj) {
 		const xpText = document.createElement("span");
 		xpText.classList.add("xp");
 
-		display.appendChild(numbers);
-		display.appendChild(xpText);
-		display.appendChild(moduleName);
+		displays[i].appendChild(numbers);
+		displays[i].appendChild(xpText);
+		displays[i].appendChild(moduleName);
 	}
 }
 
