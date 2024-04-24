@@ -10,6 +10,7 @@ export async function profilePage() {
 
 	const uInfo = await userInfo();
 	const gInfo = await graphInfo();
+	const lInfo = await lvInfo();
 
 	placeName(`${uInfo.firstName} "${uInfo.login}" ${uInfo.lastName}`);
 	placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
