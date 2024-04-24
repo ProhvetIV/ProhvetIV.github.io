@@ -1,4 +1,4 @@
-import { removeSessions } from "./sessions";
+import { removeSessions } from "./sessions.js";
 
 export function logout() {
 	removeSessions;
