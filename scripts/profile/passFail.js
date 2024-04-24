@@ -135,14 +135,14 @@ function createFailChart(piscine, chartName) {
 		bar.classList.add("bar");
 
 		const rect = document.createElementNS(svgNS, "rect");
-		rect.width = fails * 20;
-		rect.height = 20;
-		rect.y = counter * 20;
+		rect.setAttributeNS(null, "width", fails * 20);
+		rect.setAttributeNS(null, "height", 20);
+		rect.setAttributeNS(null, "y", counter * 20);
 
 		const text = document.createElementNS(svgNS, "text");
-		text.x = fails * 20 + 5;
-		text.y = fails * 20 + 8;
-		text.dy = ".35em";
+		rect.setAttributeNS(null, "x", fails * 20 + 5);
+		rect.setAttributeNS(null, "y", counter * 20 + 8);
+		rect.setAttributeNS(null, "dy", ".35em");
 		text.textContent = `${key}: ${fails} fail(s)`;
 
 		piscineChart.appendChild(bar);
