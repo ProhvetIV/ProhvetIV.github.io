@@ -15,6 +15,7 @@ export async function profilePage() {
 	placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
 	const { div01XP, piscineGO, piscineJS } = getXP(uInfo.xps);
 	placeXP(div01XP, piscineGO, piscineJS);
+	//getLv()
 }
 
 // Fetch for user info.

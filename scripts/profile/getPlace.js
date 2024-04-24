@@ -33,6 +33,21 @@ function placeXP(div01, go, js, select) {
 	xp.textContent = div01;
 }
 
+function placeLv(lvObj) {
+	const displays = [...document.querySelectorAll("xp-display")];
+	const arr = ["DIV-01", "PISCINE-GO", "PISCINE-JS"];
+
+	for (let i = 0; i < displays.length; i++) {
+		const display = displays[i];
+		const numbers = document.createElement("span");
+		numbers.textContent = lvObj[i];
+		numbers.id = arr[i] + "-xp";
+		const moduleName = document.createElement("span");
+		moduleName.textContent = arr[i];
+		moduleName.id = arr[i] + "-xp-text";
+	}
+}
+
 // Calculate the amount of XP for each piscine and div.
 function getXP(xps) {
 	let div01XP = 0;
@@ -77,4 +92,4 @@ function getLv(levels) {
 	return lvObject;
 }
 
-export { getXP, getLv, placeAudit, placeName, placeXP };
+export { getXP, getLv, placeAudit, placeName, placeXP, placeLv };
