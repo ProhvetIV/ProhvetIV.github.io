@@ -106,11 +106,11 @@ function placePassFail(go, js) {
 		const tr = document.createElement("tr");
 		const td = document.createElement("td");
 		if (value.pass === 0) {
-			td.textContent = 0;
+			td.textContent = 0.0;
 		} else if (value.fail === 0) {
-			td.textContent = 1;
+			td.textContent = 1.0;
 		} else {
-			td.textContent = value.pass / (value.pass + value.fail);
+			td.textContent = parseFloat(value.pass / (value.pass + value.fail)).toFixed(2);
 		}
 		jsTableBody.appendChild(tr);
 		tr.appendChild(td);
