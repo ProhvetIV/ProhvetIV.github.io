@@ -29,7 +29,6 @@ function placeXP(div01, go, js, select) {
 		return;
 	}
 
-	console.log("here, div01: ", div01);
 	xp.textContent = div01;
 }
 

@@ -36,7 +36,6 @@ async function userInfo() {
 
 		const data = await info.json();
 		const userData = data.data.user[0];
-		console.log(userData);
 
 		return userData;
 	} catch (error) {
@@ -87,7 +86,7 @@ async function lvInfo() {
 		const data = await info.json();
 		const lvData = data.data.transaction;
 
-		return data;
+		return lvData;
 	} catch (error) {
 		console.log(error);
 	}
