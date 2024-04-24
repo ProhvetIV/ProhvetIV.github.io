@@ -28,7 +28,7 @@ function placeXP(div01, go, js, select) {
 }
 
 function placeLv(lvObj) {
-	const displays = [...document.querySelectorAll(".xp-display")];
+	const displays = [...document.querySelectorAll("xp-display")];
 	console.log(displays);
 	console.log([...document.querySelectorAll("xp-display")]);
 
