@@ -29,6 +29,8 @@ function placeXP(div01, go, js, select) {
 
 function placeLv(lvObj) {
 	const displays = [...document.querySelectorAll(".xp-display")];
+	console.log(displays);
+	console.log([...document.querySelectorAll("xp-display")]);
 
 	for (let i = 0; i < displays.length; i++) {
 		const numbers = document.createElement("span");
