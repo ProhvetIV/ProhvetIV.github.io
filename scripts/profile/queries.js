@@ -19,25 +19,47 @@ const userInfoQuery = `
 `;
 
 const xpQuery = `
-  query transaction($where: transaction_bool_exp) {
-    transaction(where: $where) {
+  query transaction($order_by: [transaction_order_by!], $where: transaction_bool_exp) {
+    transaction(order_by: $order_by, where: $where) {
       type
       amount
       objectId
       userId
       createdAt
       path
-      transaction_type {
-        type
-      }
-      event {
-        path
-      }
     }
   }
 `;
 const xpVariables = {
-	where: { type: { _eq: "xp" } },
+	order_by: {
+		createdAt: "asc",
+	},
+	where: {
+		type: {
+			_eq: "xp",
+		},
+	},
 };
 
-export { userInfoQuery, xpQuery, xpVariables };
+const lvQuery = `
+  query transaction($order_by: [transaction_order_by!], $where: transaction_bool_exp) {
+    transaction(order_by: $order_by, where: $where) {
+      type
+      amount
+      createdAt
+      path
+    }
+  }
+`;
+const lvVariables = {
+	order_by: {
+		amount: "desc",
+	},
+	where: {
+		type: {
+			_eq: "level",
+		},
+	},
+};
+
+export { userInfoQuery, xpQuery, xpVariables, lvQuery, lvVariables };

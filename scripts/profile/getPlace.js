@@ -56,4 +56,25 @@ function getXP(xps) {
 	return { div01XP, piscineGO, piscineJS };
 }
 
-export { getXP, placeAudit, placeName, placeXP };
+// Get the level of each module.
+function getLv(levels) {
+	const lvObject = {
+		div01: 0,
+		piscineGO: 0,
+		piscineJS: 0,
+	};
+	const arr = ["div-01", "piscine-go", "piscine-js"];
+
+	for (let i = 0; i < arr.length; i++) {
+		for (let j = 0; j < levels.length; j++) {
+			if (levels[j].path.includes(arr[i])) {
+				lvObject[i] = levels[j].amount;
+				break;
+			}
+		}
+	}
+
+	return lvObject;
+}
+
+export { getXP, getLv, placeAudit, placeName, placeXP };

@@ -65,3 +65,27 @@ async function graphInfo() {
 		console.log(error);
 	}
 }
+
+async function lvInfo() {
+	const token = JSON.parse(sessionStorage.getItem("JWT"))["value"];
+
+	try {
+		const info = await fetch("https://01.kood.tech/api/graphql-engine/v1/graphql", {
+			method: "POST",
+			headers: {
+				Authorization: "Bearer " + token,
+			},
+			body: JSON.stringify({
+				query: queries.lvQuery,
+				variables: queries.lvVariables,
+			}),
+		});
+
+		const data = await info.json();
+		console.log(data);
+
+		return data;
+	} catch (error) {
+		console.log(error);
+	}
+}
