@@ -76,6 +76,7 @@ function placePassFail(go, js) {
 	goTable.appendChild(goTableHead);
 	goTableHead.appendChild(goTr);
 	goTr.appendChild(goTableH);
+	jsTable.appendChild(jsTableBody);
 	for (const [key, value] of Object.entries(go)) {
 		const tr = document.createElement("tr");
 		const td = document.createElement("td");
@@ -100,6 +101,7 @@ function placePassFail(go, js) {
 	jsTable.appendChild(jsTableHead);
 	jsTableHead.appendChild(jsTr);
 	jsTr.appendChild(jsTableH);
+	jsTable.appendChild(jsTableBody);
 	for (const [key, value] of Object.entries(js)) {
 		const tr = document.createElement("tr");
 		const td = document.createElement("td");
