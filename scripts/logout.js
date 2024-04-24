@@ -1,6 +1,6 @@
 import { removeSessions } from "./sessions.js";
 
 export function logout() {
-	removeSessions;
+	removeSessions();
 	window.location.href = "index.html";
 }
