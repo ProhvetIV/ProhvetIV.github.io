@@ -17,20 +17,13 @@ function placeAudit(ratio, up, down) {
 	auditDown.textContent = down;
 }
 
-// Display the xp number.
-function placeXP(div01, go, js, select) {
-	const xpEls = [...document.querySelectorAll("xp")];
-	const arr = [div01, go, js];
-
-	for (let i = 0; i < xpEls.length; i++) {
-		xpEls[i].textContent = arr[i];
-	}
-}
-
+// Display the Lv.
 function placeLv(lvObj) {
 	const displays = [...document.querySelectorAll("xp-display")];
 	console.log(displays);
 	console.log([...document.querySelectorAll("xp-display")]);
+	console.log(document.querySelectorAll("xp-display"));
+	console.log(document.querySelectorAll(".xp-display"));
 
 	for (let i = 0; i < displays.length; i++) {
 		const numbers = document.createElement("span");
@@ -45,6 +38,16 @@ function placeLv(lvObj) {
 		displays[i].appendChild(numbers);
 		displays[i].appendChild(xpText);
 		displays[i].appendChild(moduleName);
+	}
+}
+
+// Display the xp number.
+function placeXP(div01, go, js, select) {
+	const xpEls = [...document.querySelectorAll("xp")];
+	const arr = [div01, go, js];
+
+	for (let i = 0; i < xpEls.length; i++) {
+		xpEls[i].textContent = arr[i];
 	}
 }
 
