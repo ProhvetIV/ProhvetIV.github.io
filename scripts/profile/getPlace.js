@@ -1,3 +1,5 @@
+const modules = ["DIV-01", "PISCINE-GO", "PISCINE-JS"];
+
 // Display the name of the user.
 function placeName(name) {
 	const h1 = document.getElementById("name-in-header");
@@ -17,33 +19,31 @@ function placeAudit(ratio, up, down) {
 
 // Display the xp number.
 function placeXP(div01, go, js, select) {
-	const xp = document.getElementById("xp");
+	const xpEls = [...document.querySelectorAll("xp")];
+	const arr = [div01, go, js];
 
-	if (select === "Piscine GO") {
-		xp.textContent = go;
-		return;
+	for (let i = 0; i < xpEls.length; i++) {
+		xpEls[i].textContent = arr[i];
 	}
-
-	if (select === "Piscine JS") {
-		xp.textContent = js;
-		return;
-	}
-
-	xp.textContent = div01;
 }
 
 function placeLv(lvObj) {
 	const displays = [...document.querySelectorAll("xp-display")];
-	const arr = ["DIV-01", "PISCINE-GO", "PISCINE-JS"];
 
 	for (let i = 0; i < displays.length; i++) {
 		const display = displays[i];
 		const numbers = document.createElement("span");
 		numbers.textContent = lvObj[i];
-		numbers.id = arr[i] + "-xp";
+		numbers.id = modules[i] + "-lv";
 		const moduleName = document.createElement("span");
-		moduleName.textContent = arr[i];
-		moduleName.id = arr[i] + "-xp-text";
+		moduleName.textContent = modules[i];
+		moduleName.id = modules[i] + "-lv-text";
+		const xpText = document.createElement("span");
+		xpText.classList.add("xp");
+
+		display.appendChild(numbers);
+		display.appendChild(xpText);
+		display.appendChild(moduleName);
 	}
 }
 
@@ -77,11 +77,11 @@ function getLv(levels) {
 		piscineGO: 0,
 		piscineJS: 0,
 	};
-	const arr = ["div-01", "piscine-go", "piscine-js"];
+	const moduleArr = ["div-01", "piscine-go", "piscine-js"];
 
-	for (let i = 0; i < arr.length; i++) {
+	for (let i = 0; i < moduleArr.length; i++) {
 		for (let j = 0; j < levels.length; j++) {
-			if (levels[j].path.includes(arr[i])) {
+			if (levels[j].path.includes(moduleArr[i])) {
 				lvObject[i] = levels[j].amount;
 				break;
 			}
