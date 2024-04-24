@@ -90,7 +90,7 @@ main {
 /* xp earned in a time period */
 #pass-fail {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-around;
 }
 

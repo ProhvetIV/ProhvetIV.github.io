@@ -85,7 +85,7 @@ function placePassFail(go, js) {
 		} else if (value.fail === 0) {
 			td.textContent = parseFloat(1.001).toFixed(2);
 		} else {
-			parseFloat(value.pass / (value.pass + value.fail)).toFixed(2);
+			td.textContent = parseFloat(value.pass / (value.pass + value.fail)).toFixed(2);
 		}
 		goTableBody.appendChild(tr);
 		tr.appendChild(td);
