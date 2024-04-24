@@ -62,4 +62,14 @@ const lvVariables = {
 	},
 };
 
-export { userInfoQuery, xpQuery, xpVariables, lvQuery, lvVariables };
+const passFailQuery = `
+query progress {
+  progress {
+    createdAt
+    grade
+    path
+  }
+}
+`;
+
+export { userInfoQuery, xpQuery, xpVariables, lvQuery, lvVariables, passFailQuery };

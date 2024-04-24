@@ -17,10 +17,9 @@ function placeAudit(ratio, up, down) {
 	auditDown.textContent = down;
 }
 
-// Display the Lv.
+// Display the Lv and module.
 function placeLv(lvObj) {
 	const displays = [...document.querySelectorAll(".xp-display")];
-	console.log(displays);
 
 	for (let i = 0; i < displays.length; i++) {
 		const numbers = document.createElement("span");
@@ -44,7 +43,7 @@ function placeXP(div01, go, js) {
 	const arr = [div01, go, js];
 
 	for (let i = 0; i < xpEls.length; i++) {
-		xpEls[i].textContent = arr[i];
+		xpEls[i].textContent = "XP:" + arr[i];
 	}
 }
 
@@ -91,5 +90,7 @@ function getLv(levels) {
 
 	return lvObject;
 }
+
+function getUserProgress(progress) {}
 
 export { getXP, getLv, placeAudit, placeName, placeXP, placeLv };
