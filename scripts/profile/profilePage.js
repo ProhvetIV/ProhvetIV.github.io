@@ -20,4 +20,5 @@ export async function profilePage() {
 	placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
 	placeLv(getLv(lInfo));
 	placeXP(getXP(uInfo.xps));
+	placePassFail(getPassFail(pfInfo));
 }
