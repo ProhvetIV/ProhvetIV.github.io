@@ -91,6 +91,4 @@ function getLv(levels) {
 	return lvObject;
 }
 
-function getUserProgress(progress) {}
-
 export { getXP, getLv, placeAudit, placeName, placeXP, placeLv };
