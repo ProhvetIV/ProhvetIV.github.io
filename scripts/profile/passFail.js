@@ -81,9 +81,9 @@ function placePassFail(go, js) {
 		const tr = document.createElement("tr");
 		const td = document.createElement("td");
 		if (value.pass === 0) {
-			td.textContent = parseFloat(0).toFixed(2);
+			td.textContent = parseFloat(0.001).toFixed(2);
 		} else if (value.fail === 0) {
-			td.textContent = parseFloat(1).toFixed(2);
+			td.textContent = parseFloat(1.001).toFixed(2);
 		} else {
 			parseFloat(value.pass / (value.pass + value.fail)).toFixed(2);
 		}
@@ -106,9 +106,9 @@ function placePassFail(go, js) {
 		const tr = document.createElement("tr");
 		const td = document.createElement("td");
 		if (value.pass === 0) {
-			td.textContent = parseFloat(0).toFixed(2);
+			td.textContent = parseFloat(0.001).toFixed(2);
 		} else if (value.fail === 0) {
-			td.textContent = parseFloat(1).toFixed(2);
+			td.textContent = parseFloat(1.001).toFixed(2);
 		} else {
 			td.textContent = parseFloat(value.pass / (value.pass + value.fail)).toFixed(2);
 		}
