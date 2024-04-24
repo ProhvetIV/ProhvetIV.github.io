@@ -67,11 +67,15 @@ function placePassFail(go, js) {
 
 	// Create tables for ratio.
 	const goTable = document.createElement("table");
+	const goTableHead = document.createElement("thead");
 	const goTr = document.createElement("tr");
-	const goTableHeader = document.createElement("th");
+	const goTableH = document.createElement("th");
+	const goTableBody = document.createElement("tbody");
+	goTableH.textContent = "Ratio";
 	passFailSection.appendChild(goTable);
-	goTable.appendChild(goTr);
-	goTr.appendChild(goTableHeader);
+	goTable.appendChild(goTableHead);
+	goTableHead.appendChild(goTr);
+	goTr.appendChild(goTableH);
 	for (const [key, value] of Object.entries(go)) {
 		const tr = document.createElement("tr");
 		const td = document.createElement("td");
@@ -82,16 +86,20 @@ function placePassFail(go, js) {
 		} else {
 			td.textContent = value.pass / (value.pass + value.fail);
 		}
-		goTable.appendChild(tr);
+		goTableBody.appendChild(tr);
 		tr.appendChild(td);
 	}
 
 	const jsTable = document.createElement("table");
+	const jsTableHead = document.createElement("thead");
 	const jsTr = document.createElement("tr");
-	const jsTableHeader = document.createElement("th");
+	const jsTableH = document.createElement("th");
+	const jsTableBody = document.createElement("tbody");
+	jsTableH.textContent = "Ratio";
 	passFailSection.appendChild(jsTable);
-	jsTable.appendChild(jsTr);
-	jsTr.appendChild(jsTableHeader);
+	jsTable.appendChild(jsTableHead);
+	jsTableHead.appendChild(jsTr);
+	jsTr.appendChild(jsTableH);
 	for (const [key, value] of Object.entries(js)) {
 		const tr = document.createElement("tr");
 		const td = document.createElement("td");
@@ -102,7 +110,7 @@ function placePassFail(go, js) {
 		} else {
 			td.textContent = value.pass / (value.pass + value.fail);
 		}
-		jsTable.appendChild(tr);
+		jsTableBody.appendChild(tr);
 		tr.appendChild(td);
 	}
 }

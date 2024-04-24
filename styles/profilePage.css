@@ -88,3 +88,12 @@ main {
 }
 
 /* xp earned in a time period */
+#pass-fail {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+table {
+	border-collapse: collapse;
+}
