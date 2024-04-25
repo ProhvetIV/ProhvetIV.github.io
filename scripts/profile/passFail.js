@@ -159,7 +159,7 @@ function createFailChart(piscine, chartName) {
 	for (const [key, value] of Object.entries(piscine)) {
 		// Check if too many fails.
 		const fails = value.fail;
-		const x = fails * 20;
+		let x = fails * 20;
 		let over = false;
 		if (x >= 200) {
 			x = 200;
