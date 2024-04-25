@@ -159,5 +159,5 @@ tbody tr:last-of-type {
 }
 
 .over {
-	fill: #535252;
+	fill: linear-gradient(0.25turn, #aaa, #535252);
 }
