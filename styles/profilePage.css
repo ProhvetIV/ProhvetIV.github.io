@@ -127,6 +127,12 @@ tbody tr:last-of-type {
 }
 
 /* Fail charts */
+.fail-pass-figure {
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 10px;
+}
+
 .bar {
 	fill: #aaa; /* changes the background */
 	height: 22px;
