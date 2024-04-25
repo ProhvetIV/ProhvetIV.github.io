@@ -27,6 +27,12 @@
 
 /* Scrollbar end */
 
+body {
+	font-family: "Roboto", sans-serif;
+	background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+	width: 100vw;
+}
+
 header {
 	background-color: rgba(0, 0, 0, 0.2);
 	height: 10vh;
@@ -34,12 +40,6 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-}
-
-body {
-	font-family: "Roboto", sans-serif;
-	background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
-	width: 100vw;
 }
 
 h1,
