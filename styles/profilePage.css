@@ -129,6 +129,7 @@ tbody tr:last-of-type {
 /* Fail charts */
 .bar {
 	fill: grey; /* changes the background */
+	height: 21px;
 	transition: fill 0.3s ease;
 	cursor: pointer;
 
