@@ -128,12 +128,13 @@ tbody tr:last-of-type {
 
 /* Fail charts */
 .pass-fail-div {
+	height: 500px;
 	background: radial-gradient(circle, rgba(111, 191, 187, 1) 0%, rgba(129, 123, 223, 1) 100%, rgba(149, 210, 203, 1) 100%);
-	border: 1px solid black;
-	box-shadow: 0px 0px 19px 7px rgba(0, 0, 0, 0.75);
-	border-radius: 10px;
-	padding: 10px;
 	opacity: 0.7;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 10px;
+	box-shadow: 0px 0px 19px 7px rgba(0, 0, 0, 0.75);
 }
 
 .fail-pass-figure {
