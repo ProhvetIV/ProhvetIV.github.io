@@ -128,7 +128,7 @@ tbody tr:last-of-type {
 
 /* Fail charts */
 .bar {
-	fill: red; /* changes the background */
+	fill: grey; /* changes the background */
 	height: 21px;
 	transition: fill 0.3s ease;
 	cursor: pointer;
@@ -141,7 +141,6 @@ tbody tr:last-of-type {
 .bar:focus {
 	fill: black;
 }
-.bar:hover text,
-.bar:focus text {
+.bar:hover text {
 	fill: red;
 }
