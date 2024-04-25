@@ -135,6 +135,7 @@ tbody tr:last-of-type {
 	border: 1px solid black;
 	border-radius: 10px;
 	box-shadow: 0px 0px 19px 7px rgba(0, 0, 0, 0.75);
+	overflow: auto;
 }
 
 .fail-pass-figure {
