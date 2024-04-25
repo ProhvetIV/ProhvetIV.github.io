@@ -149,6 +149,11 @@ function createFailChart(piscine, chartName) {
 	ratioText.setAttributeNS(null, "dy", ".35em");
 	nameText.textContent = "RATIO";
 
+	piscineChart.appendChild(headerBar);
+	headerBar.appendChild(nameText);
+	headerBar.appendChild(failsText);
+	headerBar.appendChild(ratioText);
+
 	// The informational part. Creates the bar, adds rect and text.
 	let counter = 0;
 	for (const [key, value] of Object.entries(piscine)) {
