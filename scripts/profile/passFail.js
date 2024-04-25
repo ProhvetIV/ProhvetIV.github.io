@@ -127,6 +127,29 @@ function createFailChart(piscine, chartName) {
 	const piscineChart = document.getElementById(chartName);
 	const svgNS = "http://www.w3.org/2000/svg";
 
+	// Header bar of the chart.
+	const headerBar = document.createElementNS(svgNS, "g");
+	headerBar.classList.add("headerBar");
+
+	const nameText = document.createElementNS(svgNS, "text");
+	nameText.setAttributeNS(null, "x", 255);
+	nameText.setAttributeNS(null, "y", 8);
+	nameText.setAttributeNS(null, "dy", ".35em");
+	nameText.textContent = "EXERCISE";
+
+	const failsText = document.createElementNS(svgNS, "text");
+	failsText.setAttributeNS(null, "x", 455);
+	failsText.setAttributeNS(null, "y", 8);
+	failsText.setAttributeNS(null, "dy", ".35em");
+	nameText.textContent = "FAILS";
+
+	const ratioText = document.createElementNS(svgNS, "text");
+	ratioText.setAttributeNS(null, "x", 530);
+	ratioText.setAttributeNS(null, "y", 8);
+	ratioText.setAttributeNS(null, "dy", ".35em");
+	nameText.textContent = "RATIO";
+
+	// The informational part. Creates the bar, adds rect and text.
 	let counter = 0;
 	for (const [key, value] of Object.entries(piscine)) {
 		const fails = value.fail;
@@ -137,11 +160,11 @@ function createFailChart(piscine, chartName) {
 		const rect = document.createElementNS(svgNS, "rect");
 		rect.setAttributeNS(null, "width", fails * 20 + 1);
 		rect.setAttributeNS(null, "height", 18);
-		rect.setAttributeNS(null, "y", counter * 20);
+		rect.setAttributeNS(null, "y", counter * 20 + 20);
 
 		const text = document.createElementNS(svgNS, "text");
 		text.setAttributeNS(null, "x", fails * 20 + 5);
-		text.setAttributeNS(null, "y", counter * 20 + 8);
+		text.setAttributeNS(null, "y", counter * 20 + 28);
 		text.setAttributeNS(null, "dy", ".35em");
 		text.textContent = `${key}: ${fails} fail(s)`;
 
