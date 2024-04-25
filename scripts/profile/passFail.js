@@ -132,19 +132,19 @@ function createFailChart(piscine, chartName) {
 	headerBar.classList.add("headerBar");
 
 	const nameText = document.createElementNS(svgNS, "text");
-	nameText.setAttributeNS(null, "x", 255);
+	nameText.setAttributeNS(null, "x", 225);
 	nameText.setAttributeNS(null, "y", 8);
 	nameText.setAttributeNS(null, "dy", ".35em");
 	nameText.textContent = "EXERCISE";
 
 	const failsText = document.createElementNS(svgNS, "text");
-	failsText.setAttributeNS(null, "x", 455);
+	failsText.setAttributeNS(null, "x", 400);
 	failsText.setAttributeNS(null, "y", 8);
 	failsText.setAttributeNS(null, "dy", ".35em");
 	failsText.textContent = "FAILS";
 
 	const ratioText = document.createElementNS(svgNS, "text");
-	ratioText.setAttributeNS(null, "x", 530);
+	ratioText.setAttributeNS(null, "x", 460);
 	ratioText.setAttributeNS(null, "y", 8);
 	ratioText.setAttributeNS(null, "dy", ".35em");
 	ratioText.textContent = "RATIO";
@@ -186,19 +186,19 @@ function createFailChart(piscine, chartName) {
 		rect.setAttributeNS(null, "y", counter * 20 + 20);
 
 		const text = document.createElementNS(svgNS, "text");
-		text.setAttributeNS(null, "x", 255);
+		text.setAttributeNS(null, "x", 220);
 		text.setAttributeNS(null, "y", counter * 20 + 28);
 		text.setAttributeNS(null, "dy", ".35em");
 		text.textContent = `${key}`;
 
 		const ftext = document.createElementNS(svgNS, "text");
-		ftext.setAttributeNS(null, "x", 455);
+		ftext.setAttributeNS(null, "x", 400);
 		ftext.setAttributeNS(null, "y", counter * 20 + 28);
 		ftext.setAttributeNS(null, "dy", ".35em");
 		ftext.textContent = `${fails}`;
 
 		const rtext = document.createElementNS(svgNS, "text");
-		rtext.setAttributeNS(null, "x", 530);
+		rtext.setAttributeNS(null, "x", 460);
 		rtext.setAttributeNS(null, "y", counter * 20 + 28);
 		rtext.setAttributeNS(null, "dy", ".35em");
 		rtext.textContent = `${ratio}`;
