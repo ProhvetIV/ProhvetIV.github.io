@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	border: 1px solid greenyellow;
 }
 
 /* Scrollbar */
@@ -82,12 +83,6 @@ main {
 	opacity: 0.5;
 }
 /* Buttons end */
-
-#modules {
-	width: 300px;
-	padding-left: 20px;
-}
-
 /* xp-display */
 #levels {
 	height: 30vh;
