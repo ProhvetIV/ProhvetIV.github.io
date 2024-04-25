@@ -175,7 +175,7 @@ function createFailChart(piscine, chartName) {
 		rect.setAttributeNS(null, "y", counter * 20 + 20);
 
 		const text = document.createElementNS(svgNS, "text");
-		text.setAttributeNS(null, "x", x + 5);
+		text.setAttributeNS(null, "x", 255);
 		text.setAttributeNS(null, "y", counter * 20 + 28);
 		text.setAttributeNS(null, "dy", ".35em");
 		text.textContent = `${key}: ${fails} fail(s)`;
