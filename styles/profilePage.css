@@ -135,6 +135,7 @@ tbody tr:last-of-type {
 }
 
 .fail-pass-figure {
+	padding: 10px;
 }
 
 .bar {
