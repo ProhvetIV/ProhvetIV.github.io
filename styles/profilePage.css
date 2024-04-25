@@ -145,7 +145,7 @@ tbody tr:last-of-type {
 /* Fail charts */
 .pass-fail-div {
 	height: 500px;
-	width: 40vw;
+	min-width: 550;
 	background: radial-gradient(circle, rgba(111, 191, 187, 1) 0%, rgba(129, 123, 223, 1) 100%, rgba(149, 210, 203, 1) 100%);
 	opacity: 0.7;
 	padding: 10px;
