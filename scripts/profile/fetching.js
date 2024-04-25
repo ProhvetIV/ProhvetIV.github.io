@@ -42,7 +42,7 @@ async function progressInfo() {
 		const data = await info.json();
 		console.log(data);
 
-		return data;
+		return data.data.transaction;
 	} catch (error) {
 		console.log(error);
 	}

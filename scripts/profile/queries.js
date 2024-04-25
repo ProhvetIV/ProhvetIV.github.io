@@ -27,16 +27,22 @@ const xpQuery = `
       userId
       createdAt
       path
+      object {
+        attrs
+      }
     }
   }
 `;
 const xpVariables = {
-	order_by: {
-		createdAt: "asc",
-	},
+	order_by: { createdAt: "asc" },
 	where: {
 		type: {
 			_eq: "xp",
+		},
+		object: {
+			attrs: {
+				_has_key: "displayedName",
+			},
 		},
 	},
 };
@@ -63,13 +69,13 @@ const lvVariables = {
 };
 
 const passFailQuery = `
-query progress {
-  progress {
-    createdAt
-    grade
-    path
+  query progress {
+    progress {
+      createdAt
+      grade
+      path
+    }
   }
-}
 `;
 
 export { userInfoQuery, xpQuery, xpVariables, lvQuery, lvVariables, passFailQuery };

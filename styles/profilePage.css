@@ -103,7 +103,7 @@ main {
 	background-color: white;
 	box-shadow: 0px 0px 19px 7px rgba(0, 0, 0, 0.75);
 	/*background: radial-gradient(circle, rgba(111, 191, 187, 1) 0%, rgba(129, 123, 223, 1) 100%, rgba(149, 210, 203, 1) 100%);*/
-	opacity: 0.2;
+	opacity: 0.5;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -154,7 +154,7 @@ tbody tr:last-of-type {
 	min-width: 550;
 	background-color: white;
 	/*background: radial-gradient(circle, rgba(111, 191, 187, 1) 0%, rgba(129, 123, 223, 1) 100%, rgba(149, 210, 203, 1) 100%);*/
-	opacity: 0.2;
+	opacity: 0.5;
 	padding: 10px;
 	border: 1px solid black;
 	border-radius: 10px;
