@@ -141,13 +141,13 @@ function createFailChart(piscine, chartName) {
 	failsText.setAttributeNS(null, "x", 455);
 	failsText.setAttributeNS(null, "y", 8);
 	failsText.setAttributeNS(null, "dy", ".35em");
-	nameText.textContent = "FAILS";
+	failsText.textContent = "FAILS";
 
 	const ratioText = document.createElementNS(svgNS, "text");
 	ratioText.setAttributeNS(null, "x", 530);
 	ratioText.setAttributeNS(null, "y", 8);
 	ratioText.setAttributeNS(null, "dy", ".35em");
-	nameText.textContent = "RATIO";
+	ratioText.textContent = "RATIO";
 
 	piscineChart.appendChild(headerBar);
 	headerBar.appendChild(nameText);
