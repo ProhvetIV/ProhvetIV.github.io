@@ -201,10 +201,10 @@ function createFailChart(piscine, chartName) {
 		rtext.setAttributeNS(null, "x", 530);
 		rtext.setAttributeNS(null, "y", counter * 20 + 28);
 		rtext.setAttributeNS(null, "dy", ".35em");
-		rtext.textContent = `${fails}`;
+		rtext.textContent = `${ratio}`;
 
 		if (over) {
-			text.classList.add("over");
+			bar.classList.add("over");
 		}
 
 		piscineChart.appendChild(bar);
