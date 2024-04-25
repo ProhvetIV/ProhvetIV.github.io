@@ -144,13 +144,6 @@ tbody tr:last-of-type {
 	}
 }
 
-.chart:hover,
-.chart:focus {
-	.bar {
-		fill: #aaa;
-	}
-}
-
 .bar:hover,
 .bar:focus {
 	fill: red !important;
@@ -158,4 +151,8 @@ tbody tr:last-of-type {
 	text {
 		fill: red;
 	}
+}
+
+.over {
+	fill: #535252;
 }

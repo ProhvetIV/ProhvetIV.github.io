@@ -157,21 +157,32 @@ function createFailChart(piscine, chartName) {
 	// The informational part. Creates the bar, adds rect and text.
 	let counter = 0;
 	for (const [key, value] of Object.entries(piscine)) {
+		// Check if too many fails.
 		const fails = value.fail;
+		const x = fails * 20;
+		let over = false;
+		if (x >= 200) {
+			x = 200;
+			over = true;
+		}
 
 		const bar = document.createElementNS(svgNS, "g");
 		bar.classList.add("bar");
 
 		const rect = document.createElementNS(svgNS, "rect");
-		rect.setAttributeNS(null, "width", fails * 20 + 1);
+		rect.setAttributeNS(null, "width", x + 1);
 		rect.setAttributeNS(null, "height", 18);
 		rect.setAttributeNS(null, "y", counter * 20 + 20);
 
 		const text = document.createElementNS(svgNS, "text");
-		text.setAttributeNS(null, "x", fails * 20 + 5);
+		text.setAttributeNS(null, "x", x + 5);
 		text.setAttributeNS(null, "y", counter * 20 + 28);
 		text.setAttributeNS(null, "dy", ".35em");
 		text.textContent = `${key}: ${fails} fail(s)`;
+
+		if (over) {
+			text.classList.add("over");
+		}
 
 		piscineChart.appendChild(bar);
 		bar.appendChild(rect);
