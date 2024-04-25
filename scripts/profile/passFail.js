@@ -140,9 +140,9 @@ function createFailChart(piscine, chartName) {
 		rect.setAttributeNS(null, "y", counter * 20);
 
 		const text = document.createElementNS(svgNS, "text");
-		rect.setAttributeNS(null, "x", fails * 20 + 5);
-		rect.setAttributeNS(null, "y", counter * 20 + 8);
-		rect.setAttributeNS(null, "dy", ".35em");
+		text.setAttributeNS(null, "x", fails * 20 + 5);
+		text.setAttributeNS(null, "y", counter * 20 + 8);
+		text.setAttributeNS(null, "dy", ".35em");
 		text.textContent = `${key}: ${fails} fail(s)`;
 
 		piscineChart.appendChild(bar);
