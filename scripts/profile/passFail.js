@@ -166,6 +166,17 @@ function createFailChart(piscine, chartName) {
 			over = true;
 		}
 
+		// calculate ratio.
+		let ratio;
+		if (value.pass === 0) {
+			ratio = parseFloat(0.001).toFixed(2);
+		} else if (value.fail === 0) {
+			ratio = parseFloat(1.001).toFixed(2);
+		} else {
+			ratio = parseFloat(value.pass / (value.pass + value.fail)).toFixed(2);
+		}
+
+		// create row
 		const bar = document.createElementNS(svgNS, "g");
 		bar.classList.add("bar");
 
@@ -178,7 +189,19 @@ function createFailChart(piscine, chartName) {
 		text.setAttributeNS(null, "x", 255);
 		text.setAttributeNS(null, "y", counter * 20 + 28);
 		text.setAttributeNS(null, "dy", ".35em");
-		text.textContent = `${key}: ${fails} fail(s)`;
+		text.textContent = `${key}`;
+
+		const ftext = document.createElementNS(svgNS, "text");
+		ftext.setAttributeNS(null, "x", 455);
+		ftext.setAttributeNS(null, "y", counter * 20 + 28);
+		ftext.setAttributeNS(null, "dy", ".35em");
+		ftext.textContent = `${fails}`;
+
+		const rtext = document.createElementNS(svgNS, "text");
+		rtext.setAttributeNS(null, "x", 530);
+		rtext.setAttributeNS(null, "y", counter * 20 + 28);
+		rtext.setAttributeNS(null, "dy", ".35em");
+		rtext.textContent = `${fails}`;
 
 		if (over) {
 			text.classList.add("over");
@@ -187,6 +210,8 @@ function createFailChart(piscine, chartName) {
 		piscineChart.appendChild(bar);
 		bar.appendChild(rect);
 		bar.appendChild(text);
+		bar.appendChild(ftext);
+		bar.appendChild(rtext);
 
 		counter++;
 	}
