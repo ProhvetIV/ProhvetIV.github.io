@@ -127,10 +127,14 @@ tbody tr:last-of-type {
 }
 
 /* Fail charts */
-.fail-pass-figure {
+.pass-fail-div {
+	background: radial-gradient(circle, rgba(111, 191, 187, 1) 0%, rgba(129, 123, 223, 1) 100%, rgba(149, 210, 203, 1) 100%);
 	border: 2px solid black;
 	border-radius: 10px;
 	padding: 10px;
+}
+
+.fail-pass-figure {
 }
 
 .bar {
