@@ -1,5 +1,5 @@
 export function createSessions(JWT) {
-	sessionStorage.setItem("JWT", JSON.stringify({ value: JWT, expires: createExpirationForSession(10) }));
+	sessionStorage.setItem("JWT", JSON.stringify({ value: JWT, expires: createExpirationForSession(30) }));
 }
 
 // Create a session expiration date. As an input use the length in minutes.
