@@ -187,8 +187,8 @@ function createFailChart(piscine, chartName) {
 		text.textContent = `${key}`;
 
 		const rect = document.createElementNS(svgNS, "rect");
-		rect.setAttributeNS(null, "x", 151);
-		rect.setAttributeNS(null, "width", x + 1);
+		rect.setAttributeNS(null, "x", 150);
+		rect.setAttributeNS(null, "width", x);
 		rect.setAttributeNS(null, "height", 18);
 		rect.setAttributeNS(null, "y", counter * 20 + 20);
 
