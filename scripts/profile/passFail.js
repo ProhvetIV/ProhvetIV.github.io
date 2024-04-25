@@ -135,7 +135,7 @@ function createFailChart(piscine, chartName) {
 		bar.classList.add("bar");
 
 		const rect = document.createElementNS(svgNS, "rect");
-		rect.setAttributeNS(null, "width", fails * 20);
+		rect.setAttributeNS(null, "width", fails * 20 + 1);
 		rect.setAttributeNS(null, "height", 20);
 		rect.setAttributeNS(null, "y", counter * 20);
 
