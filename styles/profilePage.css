@@ -188,3 +188,9 @@ tbody tr:last-of-type {
 .over {
 	fill: #8f8d8d;
 }
+
+/* Footer */
+footer {
+	height: 10vh;
+	width: 100%;
+}
