@@ -152,7 +152,7 @@ function createFailChart(piscine, chartName) {
 		counter++;
 	}
 
-	piscineChart.setAttribute("height", counter * 20 + 100);
+	piscineChart.setAttribute("height", counter * 20 + 20);
 }
 
 export { getPassFail, placePassFailRatio, placeFailCharts };
