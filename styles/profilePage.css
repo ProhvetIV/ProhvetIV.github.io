@@ -40,6 +40,10 @@ header {
 	justify-content: space-evenly;
 }
 
+#name-in-header {
+	color: white;
+}
+
 h1,
 h2,
 h3,
