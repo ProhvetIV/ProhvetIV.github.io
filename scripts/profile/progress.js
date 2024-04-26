@@ -47,7 +47,7 @@ function placeProgress(progress, xp) {
 	const lineX = document.createElementNS(svgNS, "line");
 	gridX.classList.add("grid", "x-grid");
 	lineX.setAttributeNS(null, "x1", 120);
-	lineX.setAttributeNS(null, "y1", 50);
+	lineX.setAttributeNS(null, "y1", 75);
 	lineX.setAttributeNS(null, "x2", 120);
 	lineX.setAttributeNS(null, "y2", 500);
 
