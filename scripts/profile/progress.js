@@ -13,7 +13,28 @@ const months = [
 	"December",
 ];
 
-function placeProgress(progress) {
+function makeYAxisMaxNumber(number) {
+	let n = number;
+	let counter = 1;
+
+	while (n > 10) {
+		n /= 10;
+		counter *= 10;
+	}
+
+	let rounded = Math.ceil(n) * counter;
+	return rounded;
+}
+
+function makeYAxisArrayNumbers(maxNumber) {
+	let arr = [0];
+	for (let i = 1; i < 10; i++) {
+		arr.push((maxNumber / 10) * i);
+	}
+	return arr;
+}
+
+function placeProgress(progress, xp) {
 	const progressChart = document.getElementById("progress-chart");
 	const svgNS = "http://www.w3.org/2000/svg";
 
@@ -36,6 +57,7 @@ function placeProgress(progress) {
 
 	// Add months.
 	const gridXtext = document.createElementNS(svgNS, "g");
+	gridXtext.classList.add("labels", "y-labels");
 	months.forEach((month, index) => {
 		let x = index * 65 + 100;
 		let y = 110;
@@ -44,9 +66,23 @@ function placeProgress(progress) {
 		monthText.setAttributeNS(null, "x", x);
 		monthText.setAttributeNS(null, "y", y);
 		monthText.textContent = month;
+		gridXtext.appendChild(monthText);
 	});
 
 	// Add numbers to y-axis.
+	const gridYtext = document.createElementNS(svgNS, "g");
+	gridYtext.classList.add("labels", "y-labels");
+	const arr = makeYAxisArrayNumbers(makeYAxisMaxNumber(xp));
+	arr.forEach((n, index) => {
+		let x = 60;
+		let y = 503 - index * 31;
+
+		const xpText = document.createElementNS(svgNS, "text");
+		xpText.setAttributeNS(null, "x", x);
+		xpText.setAttributeNS(null, "y", y);
+		xpText.textContent = n;
+		gridYtext.appendChild(xpText);
+	});
 
 	// Append everything in order.
 	progressChart.appendChild(gridX);
@@ -54,6 +90,7 @@ function placeProgress(progress) {
 	gridX.appendChild(lineX);
 	gridY.appendChild(lineY);
 	progressChart.appendChild(gridXtext);
+	progressChart.appendChild(gridYtext);
 }
 
 export { placeProgress };

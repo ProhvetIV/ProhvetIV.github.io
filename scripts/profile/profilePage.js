@@ -3,6 +3,7 @@ import { getLv, getXP, placeAudit, placeLv, placeName, placeXP } from "./getPlac
 import { getPassFail, placeFailCharts } from "./passFail.js";
 import { addLogout } from "./listeners.js";
 import * as fetching from "./fetching.js";
+import { placeProgress } from "./progress.js";
 
 // Base func for the profile page.
 export async function profilePage() {
@@ -26,4 +27,5 @@ export async function profilePage() {
 	placeXP(div01XP, piscineGO, piscineJS);
 	//placePassFailRatio(goExercises, jsExercises);
 	placeFailCharts(goExercises, jsExercises);
+	placeProgress(gInfo, div01XP);
 }
