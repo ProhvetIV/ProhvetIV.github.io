@@ -95,4 +95,4 @@ async function passFailInfo() {
 	}
 }
 
-export { userInfo, progressInfo, lvInfo, passFailInfo };
+export { userInfo, graphInfo, lvInfo, passFailInfo };
