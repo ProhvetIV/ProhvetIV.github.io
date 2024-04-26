@@ -14,7 +14,7 @@ function orderMonths() {
 	}
 
 	console.log(newArr);
-	return newArr.reverse();
+	return newArr;
 }
 
 function makeYAxisMaxNumber(number) {
