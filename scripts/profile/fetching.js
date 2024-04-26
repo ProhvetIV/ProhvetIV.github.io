@@ -24,7 +24,7 @@ async function userInfo() {
 }
 
 // Fetch for graph info.
-async function progressInfo() {
+async function graphInfo() {
 	const token = JSON.parse(sessionStorage.getItem("JWT"))["value"];
 
 	try {

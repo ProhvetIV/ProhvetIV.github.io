@@ -13,7 +13,7 @@ export async function profilePage() {
 	// Fetch the necessary data from the GraphQL API.
 	const uInfo = await fetching.userInfo();
 	const lInfo = await fetching.lvInfo();
-	const gInfo = await fetching.progressInfo();
+	const gInfo = await fetching.graphInfo();
 	const pfInfo = await fetching.passFailInfo();
 
 	// Necessary variables for displaying data.
