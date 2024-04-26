@@ -108,8 +108,8 @@ function placeProgress(progress, xp) {
 		const dateToText = dateStr.split(" ").slice(1, 3);
 
 		const x = (364 - (today - past) / (1000 * 60 * 60 * 24)) * 2.78 + 120;
-		const yPercentage = (exercise.amount / xp) * 100 + 500;
-		const y = (400 / 100) * yPercentage;
+		const yPercentage = (exercise.amount / xp) * 100;
+		const y = (400 / 100) * yPercentage + 500;
 
 		console.log(xp);
 		console.log(exercise.amount);
