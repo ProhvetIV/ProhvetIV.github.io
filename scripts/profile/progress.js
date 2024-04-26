@@ -13,7 +13,6 @@ function orderMonths() {
 		newArr.unshift(months[i]);
 	}
 
-	console.log(newArr);
 	return newArr;
 }
 
@@ -108,10 +107,21 @@ function placeProgress(progress, xp) {
 		const dateStr = past.toString();
 		const dateToText = dateStr.split(" ").slice(1, 3);
 
+		const todayMinusPast = today - past;
+		const daysDiff = todayMinusPast / (1000 * 60 * 60 * 24);
+		const xMultiplier = 364 - daysDiff;
+		const xPlacement = xMultiplier * 2.78 + 120;
+
+		console.log(todayMinusPast);
+		console.log(daysDiff);
+		console.log(xMultiplier);
+		console.log(xPlacement);
+
 		const x = ((364 - (today - past) / (1000 * 60 * 60 * 24)) * 2.78).toFixed(0) + 120;
 		const yPercentage = (exercise.amount / xp) * 100 + 500;
 		const y = (400 / 100) * yPercentage;
 
+		console.log(xp);
 		console.log(today);
 		console.log(past);
 		console.log(dateStr);
