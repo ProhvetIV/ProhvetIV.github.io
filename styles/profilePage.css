@@ -4,10 +4,6 @@
 	box-sizing: border-box;
 }
 
-html {
-	background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
-}
-
 /* Scrollbar */
 ::-webkit-scrollbar {
 	width: 10px;
