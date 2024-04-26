@@ -59,7 +59,7 @@ function placeProgress(progress, xp) {
 	const gridXtext = document.createElementNS(svgNS, "g");
 	gridXtext.classList.add("labels", "y-labels");
 	months.forEach((month, index) => {
-		let x = index * 70 + 135;
+		let x = index * 75 + 135;
 		let y = 520;
 
 		const monthText = document.createElementNS(svgNS, "text");
@@ -75,7 +75,7 @@ function placeProgress(progress, xp) {
 	const arr = makeYAxisArrayNumbers(makeYAxisMaxNumber(xp));
 	arr.forEach((n, index) => {
 		let x = 60;
-		let y = 503 - index * 31;
+		let y = 503 - index * 40;
 
 		const xpText = document.createElementNS(svgNS, "text");
 		xpText.setAttributeNS(null, "x", x);
