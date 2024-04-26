@@ -153,37 +153,6 @@ main {
 	justify-content: space-around;
 }
 
-table {
-	border-collapse: collapse;
-	font-size: 0.9em;
-	width: 100px;
-	overflow: auto;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-
-thead tr {
-	background-color: #009879;
-	color: #ffffff;
-	text-align: left;
-}
-
-th,
-td {
-	padding: 3px 15px;
-}
-
-tbody tr {
-	border-bottom: 1px solid #dddddd;
-}
-
-tbody tr:nth-of-type(even) {
-	background-color: #f3f3f3;
-}
-
-tbody tr:last-of-type {
-	border-bottom: 2px solid #009879;
-}
-
 /* Fail charts */
 .pass-fail-div {
 	height: 500px;
