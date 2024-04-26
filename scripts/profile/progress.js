@@ -112,7 +112,14 @@ function placeProgress(progress, xp) {
 		const yPercentage = (exercise.amount / xp) * 100 + 500;
 		const y = (400 / 100) * yPercentage;
 
-		const axe = document.createElementNS(svgNS, "text");
+		console.log(today);
+		console.log(past);
+		console.log(dateStr);
+		console.log(x);
+		console.log(yPercentage);
+		console.log(y);
+
+		const axe = document.createElementNS(svgNS, "circle");
 		axe.setAttributeNS(null, "rx", x);
 		axe.setAttributeNS(null, "ry", y);
 		axe.setAttributeNS(null, "r", 2);
