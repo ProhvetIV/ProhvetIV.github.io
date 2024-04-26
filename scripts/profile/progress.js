@@ -52,15 +52,15 @@ function placeProgress(progress, xp) {
 	gridY.classList.add("grid", "y-grid");
 	lineY.setAttributeNS(null, "x1", 90);
 	lineY.setAttributeNS(null, "y1", 500);
-	lineY.setAttributeNS(null, "x2", 900);
+	lineY.setAttributeNS(null, "x2", 1000);
 	lineY.setAttributeNS(null, "y2", 500);
 
 	// Add months.
 	const gridXtext = document.createElementNS(svgNS, "g");
 	gridXtext.classList.add("labels", "y-labels");
 	months.forEach((month, index) => {
-		let x = index * 65 + 100;
-		let y = 110;
+		let x = index * 70 + 135;
+		let y = 520;
 
 		const monthText = document.createElementNS(svgNS, "text");
 		monthText.setAttributeNS(null, "x", x);
