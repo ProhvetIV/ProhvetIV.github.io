@@ -103,8 +103,20 @@ function placeProgress(progress, xp) {
 	axes.classList.add("data");
 	axes.setAttributeNS(null, "data-setname", "axes");
 	progress.forEach((exercise) => {
-		const currentDate = new Date(exercise.createdAt);
-		const currentDay = getDayOfYear(currentDate);
+		const today = new Date(Date.now());
+		const past = new Date(exercise.createdAt);
+		const dateStr = past.toString();
+		const dateToText = dateStr.split(" ").slice(1, 3);
+
+		const x = ((364 - (today - past) / (1000 * 60 * 60 * 24)) * 2.78).toFixed(0) + 120;
+		const yPercentage = (exercise.amount / xp) * 100 + 500;
+		const y = (400 / 100) * yPercentage;
+
+		const axe = document.createElementNS(svgNS, "text");
+		axe.setAttributeNS(null, "rx", x);
+		axe.setAttributeNS(null, "ry", y);
+		axe.setAttributeNS(null, "r", 2);
+		gridYtext.appendChild(axe);
 	});
 
 	// Append everything in order.
@@ -114,6 +126,7 @@ function placeProgress(progress, xp) {
 	gridY.appendChild(lineY);
 	progressChart.appendChild(gridXtext);
 	progressChart.appendChild(gridYtext);
+	progressChart.appendChild(axes);
 }
 
 export { placeProgress };
