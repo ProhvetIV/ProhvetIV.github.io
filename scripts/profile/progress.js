@@ -26,6 +26,23 @@ function makeYAxisMaxNumber(number) {
 	return rounded;
 }
 
+// Make an array of months, so that it starts from the current month.
+function orderMonths() {
+	const currentDate = new Date();
+	const currentMonth = currentDate.getMonth();
+
+	const newArr = [];
+	for (let i = currentMonth; i >= 0; i--) {
+		newArr.unshift(months[i]);
+	}
+	for (let i = months.length - 1; i > currentMonth; i--) {
+		newArr.unshift(months[i]);
+	}
+
+	console.log(newArr);
+	return newArr;
+}
+
 function makeYAxisArrayNumbers(maxNumber) {
 	let arr = [0];
 	for (let i = 1; i < 10; i++) {
@@ -58,7 +75,8 @@ function placeProgress(progress, xp) {
 	// Add months.
 	const gridXtext = document.createElementNS(svgNS, "g");
 	gridXtext.classList.add("labels", "y-labels");
-	months.forEach((month, index) => {
+	const orderedMonths = orderMonths();
+	orderedMonths.forEach((month, index) => {
 		let x = index * 75 + 135;
 		let y = 520;
 
