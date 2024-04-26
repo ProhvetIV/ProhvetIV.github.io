@@ -116,7 +116,7 @@ function placeProgress(progress, xp) {
 		axe.setAttributeNS(null, "rx", x);
 		axe.setAttributeNS(null, "ry", y);
 		axe.setAttributeNS(null, "r", 2);
-		gridYtext.appendChild(axe);
+		axe.appendChild(axes);
 	});
 
 	// Append everything in order.
