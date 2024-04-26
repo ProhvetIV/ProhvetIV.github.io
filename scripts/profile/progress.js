@@ -101,15 +101,18 @@ function placeProgress(progress, xp) {
 	const axes = document.createElementNS(svgNS, "g");
 	axes.classList.add("data");
 	axes.setAttributeNS(null, "data-setname", "axes");
+	let cumulativeXP = 0;
 	progress.forEach((exercise) => {
 		const today = new Date(Date.now());
 		const past = new Date(exercise.createdAt);
 		const dateStr = past.toString();
 		const dateToText = dateStr.split(" ").slice(1, 3);
 
+		cumulativeXP += exercise.amount;
+
 		const x = (364 - (today - past) / (1000 * 60 * 60 * 24)) * 2.78 + 120;
-		const yPercentage = (exercise.amount / xp) * 100;
-		const y = (400 / 100) * yPercentage + 500;
+		const yPercentage = (cumulativeXP / xp) * 100;
+		const y = 500 - (400 / 100) * yPercentage;
 
 		console.log(xp);
 		console.log(exercise.amount);
