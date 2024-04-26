@@ -80,7 +80,7 @@ function placeProgress(progress, xp) {
 	const arr = makeYAxisArrayNumbers(makeYAxisMaxNumber(xp));
 	arr.forEach((n, index) => {
 		let x = 60;
-		let y = 500 - index * 50;
+		let y = 500 - index * 45;
 
 		const xpText = document.createElementNS(svgNS, "text");
 		xpText.setAttributeNS(null, "x", x);
