@@ -46,17 +46,17 @@ function placeProgress(progress, xp) {
 	const gridX = document.createElementNS(svgNS, "g");
 	const lineX = document.createElementNS(svgNS, "line");
 	gridX.classList.add("grid", "x-grid");
-	lineX.setAttributeNS(null, "x1", 90);
+	lineX.setAttributeNS(null, "x1", 120);
 	lineX.setAttributeNS(null, "y1", 50);
-	lineX.setAttributeNS(null, "x2", 90);
+	lineX.setAttributeNS(null, "x2", 120);
 	lineX.setAttributeNS(null, "y2", 500);
 
 	const gridY = document.createElementNS(svgNS, "g");
 	const lineY = document.createElementNS(svgNS, "line");
 	gridY.classList.add("grid", "y-grid");
-	lineY.setAttributeNS(null, "x1", 90);
+	lineY.setAttributeNS(null, "x1", 120);
 	lineY.setAttributeNS(null, "y1", 500);
-	lineY.setAttributeNS(null, "x2", 1000);
+	lineY.setAttributeNS(null, "x2", 1030);
 	lineY.setAttributeNS(null, "y2", 500);
 
 	// Add months.
@@ -64,7 +64,7 @@ function placeProgress(progress, xp) {
 	gridXtext.classList.add("labels", "y-labels");
 	const orderedMonths = orderMonths();
 	orderedMonths.forEach((month, index) => {
-		let x = index * 75 + 135;
+		let x = index * 75 + 165;
 		let y = 520;
 
 		const monthText = document.createElementNS(svgNS, "text");
@@ -79,7 +79,7 @@ function placeProgress(progress, xp) {
 	gridYtext.classList.add("labels", "y-labels");
 	const arr = makeYAxisArrayNumbers(makeYAxisMaxNumber(xp));
 	arr.forEach((n, index) => {
-		let x = 60;
+		let x = 90;
 		let y = 505 - index * 45;
 
 		const xpText = document.createElementNS(svgNS, "text");
