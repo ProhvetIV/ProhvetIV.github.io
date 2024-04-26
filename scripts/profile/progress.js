@@ -14,7 +14,7 @@ function orderMonths() {
 	}
 
 	console.log(newArr);
-	return newArr;
+	return newArr.reverse();
 }
 
 function makeYAxisMaxNumber(number) {
@@ -37,6 +37,14 @@ function makeYAxisArrayNumbers(maxNumber) {
 		arr.push((maxNumber / 10) * i);
 	}
 	return arr;
+}
+
+function getDayOfYear(date) {
+	var start = new Date(date.getFullYear(), 0, 0);
+	var diff = date - start;
+	var oneDay = 1000 * 60 * 60 * 24;
+	var day = Math.floor(diff / oneDay);
+	return day;
 }
 
 function placeProgress(progress, xp) {
@@ -88,6 +96,15 @@ function placeProgress(progress, xp) {
 		xpText.setAttributeNS(null, "y", y);
 		xpText.textContent = n;
 		gridYtext.appendChild(xpText);
+	});
+
+	// Add axes and labels.
+	const axes = document.createElementNS(svgNS, "g");
+	axes.classList.add("data");
+	axes.setAttributeNS(null, "data-setname", "axes");
+	progress.forEach((exercise) => {
+		const currentDate = new Date(exercise.createdAt);
+		const currentDay = getDayOfYear(currentDate);
 	});
 
 	// Append everything in order.
