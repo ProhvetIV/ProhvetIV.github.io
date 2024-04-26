@@ -1,18 +1,5 @@
 const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 
-function makeYAxisMaxNumber(number) {
-	let n = number;
-	let counter = 1;
-
-	while (n > 10) {
-		n /= 10;
-		counter *= 10;
-	}
-
-	let rounded = Math.ceil(n) * counter;
-	return rounded;
-}
-
 // Make an array of months, so that it starts from the current month.
 function orderMonths() {
 	const currentDate = new Date();
@@ -27,9 +14,23 @@ function orderMonths() {
 	}
 
 	console.log(newArr);
-	return newArr.reverse();
+	return newArr;
 }
 
+function makeYAxisMaxNumber(number) {
+	let n = number;
+	let counter = 1;
+
+	while (n > 10) {
+		n /= 10;
+		counter *= 10;
+	}
+
+	let rounded = Math.ceil(n) * counter;
+	return rounded;
+}
+
+// Make an array of numbers for Y axis.
 function makeYAxisArrayNumbers(maxNumber) {
 	let arr = [0];
 	for (let i = 1; i < 10; i++) {
