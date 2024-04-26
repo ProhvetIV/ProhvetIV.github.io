@@ -117,8 +117,8 @@ function placeProgress(progress, xp) {
 		console.log(y);
 
 		const axe = document.createElementNS(svgNS, "circle");
-		axe.setAttributeNS(null, "rx", x);
-		axe.setAttributeNS(null, "ry", y);
+		axe.setAttributeNS(null, "cx", x);
+		axe.setAttributeNS(null, "cy", y);
 		axe.setAttributeNS(null, "r", 2);
 		axes.appendChild(axe);
 	});
