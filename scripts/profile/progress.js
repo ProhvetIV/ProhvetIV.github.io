@@ -38,14 +38,6 @@ function makeYAxisArrayNumbers(maxNumber) {
 	return arr;
 }
 
-function getDayOfYear(date) {
-	var start = new Date(date.getFullYear(), 0, 0);
-	var diff = date - start;
-	var oneDay = 1000 * 60 * 60 * 24;
-	var day = Math.floor(diff / oneDay);
-	return day;
-}
-
 function placeProgress(progress, xp) {
 	const progressChart = document.getElementById("progress-chart");
 	const svgNS = "http://www.w3.org/2000/svg";
@@ -99,6 +91,9 @@ function placeProgress(progress, xp) {
 		gridYtext.appendChild(xpText);
 	});
 
+	// Coordinates array
+	const coordinatesArr = [{ x: 120, y: 500 }];
+
 	// Add axes and labels.
 	const axes = document.createElementNS(svgNS, "g");
 	axes.classList.add("data");
@@ -116,10 +111,8 @@ function placeProgress(progress, xp) {
 		const yPercentage = (cumulativeXP / xp) * 100;
 		const y = 500 - (400 / 100) * yPercentage;
 
-		console.log(xp);
-		console.log(exercise.amount);
-		console.log(yPercentage);
-		console.log(y);
+		// Add coords to array for lines
+		coordinatesArr.push({ x: x, y: y });
 
 		const axe = document.createElementNS(svgNS, "circle");
 		axe.classList.add("axe");
@@ -135,6 +128,23 @@ function placeProgress(progress, xp) {
 		axeText.textContent = `${dateToText}\n+${exercise.amount / 1000}kB`;
 		axes.appendChild(axeText);
 	});
+
+	// Add Lines.
+	const lines = document.createElementNS(svgNS, "g");
+	lines.classList.add("lines");
+	lines.setAttributeNS(null, "data-setname", "lines");
+	for (let i = 0; i < coordinatesArr.length - 2; i++) {
+		const line = document.createElementNS(svgNS, "line");
+		line.classList.add("line");
+		line.setAttributeNS(null, "x1", coordinatesArr[i].x);
+		line.setAttributeNS(null, "y1", coordinatesArr[i].y);
+		line.setAttributeNS(null, "x2", coordinatesArr[i + 1].x);
+		line.setAttributeNS(null, "y2", coordinatesArr[i + 1].y);
+		line.setAttributeNS(null, "stroke", "black");
+		line.setAttributeNS(null, "stroke-width");
+		line.setAttributeNS(null, "fill", "rgb(121,0,121)");
+		lines.appendChild(line);
+	}
 
 	// Append everything in order.
 	progressChart.appendChild(gridX);

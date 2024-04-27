@@ -146,10 +146,17 @@ main {
 
 .axetText {
 	display: none;
+	color: black;
 }
 
 .axe:hover + .axetText {
 	display: block;
+}
+
+.line {
+	stroke: black;
+	stroke-width: 1.5;
+	fill: rgb(121, 0, 121);
 }
 
 /* Pass/Fail ratio */
