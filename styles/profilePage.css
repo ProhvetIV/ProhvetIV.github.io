@@ -144,6 +144,10 @@ main {
 	stroke-width: 1;
 }
 
+.axe {
+	z-index: 10;
+}
+
 .axeText {
 	display: none;
 	color: black;
