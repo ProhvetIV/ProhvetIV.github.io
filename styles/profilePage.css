@@ -144,10 +144,6 @@ main {
 	stroke-width: 1;
 }
 
-.axe {
-	z-index: 2;
-}
-
 .axeText {
 	max-height: 0;
 	color: black;
