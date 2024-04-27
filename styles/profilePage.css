@@ -145,12 +145,12 @@ main {
 }
 
 .axeText {
-	display: none;
+	opacity: 0;
 	color: black;
 }
 
 .axe:hover + .axetText {
-	display: block;
+	opacity: 1;
 }
 
 .line {
@@ -159,7 +159,7 @@ main {
 	fill: rgb(121, 0, 121);
 }
 
-.line:first {
+.line:first-child {
 	display: none;
 }
 
