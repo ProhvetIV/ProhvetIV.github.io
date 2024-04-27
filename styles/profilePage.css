@@ -159,6 +159,10 @@ main {
 	fill: rgb(121, 0, 121);
 }
 
+.line:first {
+	display: none;
+}
+
 /* Pass/Fail ratio */
 #pass-fail {
 	display: flex;

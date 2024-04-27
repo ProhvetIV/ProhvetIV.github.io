@@ -118,7 +118,7 @@ function placeProgress(progress, xp) {
 		axe.classList.add("axe");
 		axe.setAttributeNS(null, "cx", x);
 		axe.setAttributeNS(null, "cy", y);
-		axe.setAttributeNS(null, "r", 3);
+		axe.setAttributeNS(null, "r", 2);
 		axes.appendChild(axe);
 
 		const axeText = document.createElementNS(svgNS, "text");
@@ -145,6 +145,8 @@ function placeProgress(progress, xp) {
 		line.setAttributeNS(null, "fill", "rgb(121,0,121)");
 		lines.appendChild(line);
 	}
+
+	// Add bars for months
 
 	// Append everything in order.
 	progressChart.appendChild(gridX);
