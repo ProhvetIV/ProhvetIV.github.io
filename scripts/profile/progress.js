@@ -124,7 +124,7 @@ function placeProgress(progress, xp) {
 		const axeText = document.createElementNS(svgNS, "text");
 		axeText.classList.add("axeText");
 		axeText.setAttributeNS(null, "x", x - 10);
-		axeText.setAttributeNS(null, "y", y + 20);
+		axeText.setAttributeNS(null, "y", y - 20);
 		axeText.setAttributeNS(null, "text-anchor", "middle");
 		axeText.textContent = `${dateToText} +${exercise.amount / 1000}kB`;
 		axes.appendChild(axeText);
