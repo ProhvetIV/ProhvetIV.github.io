@@ -133,7 +133,7 @@ function placeProgress(progress, xp) {
 	const lines = document.createElementNS(svgNS, "g");
 	lines.classList.add("lines");
 	lines.setAttributeNS(null, "data-setname", "lines");
-	for (let i = 0; i < coordinatesArr.length - 2; i++) {
+	for (let i = 0; i < coordinatesArr.length - 1; i++) {
 		const line = document.createElementNS(svgNS, "line");
 		line.classList.add("line");
 		line.setAttributeNS(null, "x1", coordinatesArr[i].x);
