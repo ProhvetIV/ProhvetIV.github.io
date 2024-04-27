@@ -126,6 +126,12 @@ function placeProgress(progress, xp) {
 		axe.setAttributeNS(null, "cy", y);
 		axe.setAttributeNS(null, "r", 3);
 		axes.appendChild(axe);
+
+		const label = document.eateElementNS(svgNS, "text");
+		label.setAttributeNS(null, "x", x - 10);
+		label.setAttributeNS(null, "y", y + 20);
+		label.textContent = `${dateToText}\n+${exercise.amount / 1000}kB`;
+		axes.appendChild(label);
 	});
 
 	// Append everything in order.
