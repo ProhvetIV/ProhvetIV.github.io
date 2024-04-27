@@ -110,6 +110,24 @@ main {
 	justify-content: center;
 }
 
+/* Audit pie chart */
+circle {
+	fill: #ddd;
+	stroke: red;
+	stroke-width: 200;
+	stroke-dasharray: 0 158;
+	transition: stroke-dasharray 0.3s ease;
+}
+
+figcaption {
+	margin-bottom: 20px;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Audit pie end */
+
 /* Progress chart */
 .graph .labels.x-labels {
 	text-anchor: middle;
