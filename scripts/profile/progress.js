@@ -153,8 +153,8 @@ function placeProgress(progress, xp) {
 	gridY.appendChild(lineY);
 	progressChart.appendChild(gridXtext);
 	progressChart.appendChild(gridYtext);
-	progressChart.appendChild(axes);
 	progressChart.appendChild(lines);
+	progressChart.appendChild(axes);
 }
 
 export { placeProgress };
