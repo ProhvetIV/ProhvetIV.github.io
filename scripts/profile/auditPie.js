@@ -13,7 +13,7 @@ export function placeAuditPie(ratio, up, down) {
 	pie.setAttributeNS(null, "cx", 200);
 	pie.setAttributeNS(null, "cy", 200);
 	pie.setAttributeNS(null, "r", 100);
-	pie.style.strokeDasharray = `0, ${total}`;
+	pie.style.strokeDasharray = 0 + " " + total;
 
 	// Make the colored section.
 	pie.style.strokeDasharray = `${strokeDashNumber}, ${total}`;
