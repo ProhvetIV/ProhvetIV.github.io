@@ -111,7 +111,7 @@ main {
 }
 
 /* Audit pie chart */
-circle {
+.pie {
 	fill: #ddd;
 	stroke: red;
 	stroke-width: 200;
