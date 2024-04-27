@@ -92,7 +92,7 @@ function placeProgress(progress, xp) {
 	});
 
 	// Coordinates array
-	const coordinatesArr = [{ x: 120, y: 500 }];
+	const coordinatesArr = [];
 
 	// Add axes and labels.
 	const axes = document.createElementNS(svgNS, "g");
