@@ -145,6 +145,7 @@ function placeProgress(progress, xp) {
 		line.setAttributeNS(null, "stroke-width", "1.5");
 		line.setAttributeNS(null, "fill", "rgb(121,0,121)");
 		lines.appendChild(line);
+		console.log(line);
 	}
 
 	// Add bars for months
