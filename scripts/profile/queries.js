@@ -44,6 +44,9 @@ const xpVariables = {
 				_has_key: "displayedName",
 			},
 		},
+		path: {
+			_nregex: "/.+piscine.+/",
+		},
 	},
 };
 
