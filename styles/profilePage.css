@@ -144,6 +144,14 @@ main {
 	stroke-width: 1;
 }
 
+.axetText {
+	display: none;
+}
+
+.axe:hover + .axetText {
+	display: block;
+}
+
 /* Pass/Fail ratio */
 #pass-fail {
 	display: flex;
