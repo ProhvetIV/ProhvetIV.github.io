@@ -115,7 +115,6 @@ circle {
 	fill: #ddd;
 	stroke: red;
 	stroke-width: 200;
-	stroke-dasharray: 0 158;
 	transition: stroke-dasharray 0.3s ease;
 }
 
