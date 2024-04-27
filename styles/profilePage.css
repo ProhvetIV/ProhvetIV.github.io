@@ -149,7 +149,7 @@ main {
 	color: black;
 }
 
-.axe:hover + .axetText {
+.axe:hover + .axeText {
 	opacity: 1;
 }
 
