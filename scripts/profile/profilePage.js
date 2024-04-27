@@ -4,6 +4,7 @@ import { getPassFail, placeFailCharts } from "./passFail.js";
 import { addLogout } from "./listeners.js";
 import * as fetching from "./fetching.js";
 import { placeProgress } from "./progress.js";
+import { placeAuditPie } from "./auditPie.js";
 
 // Base func for the profile page.
 export async function profilePage() {
@@ -25,6 +26,7 @@ export async function profilePage() {
 	placeAudit(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
 	placeLv(getLv(lInfo));
 	placeXP(div01XP, piscineGO, piscineJS);
+	placeAuditPie(uInfo.auditRatio, uInfo.totalUp, uInfo.totalDown);
 	//placePassFailRatio(goExercises, jsExercises);
 	placeFailCharts(goExercises, jsExercises);
 	placeProgress(gInfo, div01XP);
