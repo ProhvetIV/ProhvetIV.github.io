@@ -149,13 +149,13 @@ main {
 }
 
 .axeText {
-	z-index: -1;
+	display: none;
 	opacity: 0;
 	color: black;
 }
 
 .axe:hover + .axeText {
-	z-index: 3;
+	display: inline;
 	opacity: 1;
 }
 
