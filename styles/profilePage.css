@@ -111,11 +111,18 @@ main {
 }
 
 /* Audit pie chart */
+#audit-chart {
+	margin: 0 auto;
+	transform: rotate(-90deg);
+	background: #ddd;
+	border-radius: 50%;
+	display: block;
+}
+
 .pie {
 	fill: #ddd;
 	stroke: red;
 	stroke-width: 200;
-	transition: stroke-dasharray 0.3s ease;
 }
 
 figcaption {
