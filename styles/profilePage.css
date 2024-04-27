@@ -146,13 +146,13 @@ main {
 
 .axeText {
 	transition: max-height 0.3s ease;
-	max-height: 0;
+	font-size: 0;
 	color: black;
 	overflow: hidden;
 }
 
 .axe:hover + .axeText {
-	max-height: 10px;
+	font-size: 10pxpx;
 }
 
 .line {
