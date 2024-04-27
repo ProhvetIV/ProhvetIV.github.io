@@ -68,6 +68,8 @@ function placeProgress(progress, xp) {
 	lineY.setAttributeNS(null, "y2", 500);
 
 	// Add months.
+	// 12 months * 91
+	// 364 days * 3px width = 1092
 	const gridXtext = document.createElementNS(svgNS, "g");
 	gridXtext.classList.add("labels", "y-labels");
 	const orderedMonths = orderMonths();
@@ -122,7 +124,7 @@ function placeProgress(progress, xp) {
 		const axe = document.createElementNS(svgNS, "circle");
 		axe.setAttributeNS(null, "cx", x);
 		axe.setAttributeNS(null, "cy", y);
-		axe.setAttributeNS(null, "r", 1);
+		axe.setAttributeNS(null, "r", 3);
 		axes.appendChild(axe);
 	});
 
