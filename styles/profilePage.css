@@ -152,7 +152,6 @@ main {
 
 .axe:hover + .axeText {
 	max-height: 10px;
-	display: inline;
 }
 
 .line {
