@@ -145,12 +145,12 @@ main {
 }
 
 .axeText {
+	transition: max-height 0.3s ease;
 	max-height: 0;
 	color: black;
 }
 
 .axe:hover + .axeText {
-	transition: max-height 0.3s ease;
 	max-height: 10px;
 	display: inline;
 }
