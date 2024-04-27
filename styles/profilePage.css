@@ -149,6 +149,7 @@ main {
 }
 
 .axeText {
+	z-index: -1;
 	opacity: 0;
 	color: black;
 }

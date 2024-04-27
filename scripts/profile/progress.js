@@ -114,13 +114,6 @@ function placeProgress(progress, xp) {
 		// Add coords to array for lines
 		coordinatesArr.push({ x: x, y: y });
 
-		const axe = document.createElementNS(svgNS, "circle");
-		axe.classList.add("axe");
-		axe.setAttributeNS(null, "cx", x);
-		axe.setAttributeNS(null, "cy", y);
-		axe.setAttributeNS(null, "r", 2);
-		axes.appendChild(axe);
-
 		const axeText = document.createElementNS(svgNS, "text");
 		axeText.classList.add("axeText");
 		axeText.setAttributeNS(null, "x", x - 10);
@@ -128,6 +121,13 @@ function placeProgress(progress, xp) {
 		axeText.setAttributeNS(null, "text-anchor", "middle");
 		axeText.textContent = `${dateToText} +${exercise.amount / 1000}kB`;
 		axes.appendChild(axeText);
+
+		const axe = document.createElementNS(svgNS, "circle");
+		axe.classList.add("axe");
+		axe.setAttributeNS(null, "cx", x);
+		axe.setAttributeNS(null, "cy", y);
+		axe.setAttributeNS(null, "r", 2);
+		axes.appendChild(axe);
 	});
 
 	// Add Lines.
