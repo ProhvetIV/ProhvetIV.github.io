@@ -148,6 +148,7 @@ main {
 	transition: max-height 0.3s ease;
 	max-height: 0;
 	color: black;
+	overflow: hidden;
 }
 
 .axe:hover + .axeText {
