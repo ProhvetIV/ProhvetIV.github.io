@@ -64,7 +64,7 @@ function placeProgress(progress, xp) {
 	gridY.classList.add("grid", "y-grid");
 	lineY.setAttributeNS(null, "x1", 120);
 	lineY.setAttributeNS(null, "y1", 500);
-	lineY.setAttributeNS(null, "x2", 1030);
+	lineY.setAttributeNS(null, "x2", 1260);
 	lineY.setAttributeNS(null, "y2", 500);
 
 	// Add months.
@@ -72,7 +72,7 @@ function placeProgress(progress, xp) {
 	gridXtext.classList.add("labels", "y-labels");
 	const orderedMonths = orderMonths();
 	orderedMonths.forEach((month, index) => {
-		let x = index * 75 + 165;
+		let x = index * 91 + 165;
 		let y = 520;
 
 		const monthText = document.createElementNS(svgNS, "text");
@@ -122,7 +122,7 @@ function placeProgress(progress, xp) {
 		const axe = document.createElementNS(svgNS, "circle");
 		axe.setAttributeNS(null, "cx", x);
 		axe.setAttributeNS(null, "cy", y);
-		axe.setAttributeNS(null, "r", 2);
+		axe.setAttributeNS(null, "r", 1);
 		axes.appendChild(axe);
 	});
 
