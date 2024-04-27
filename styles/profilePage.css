@@ -144,12 +144,17 @@ main {
 	stroke-width: 1;
 }
 
+.axe {
+	z-index: 2;
+}
+
 .axeText {
 	opacity: 0;
 	color: black;
 }
 
 .axe:hover + .axeText {
+	z-index: 3;
 	opacity: 1;
 }
 
