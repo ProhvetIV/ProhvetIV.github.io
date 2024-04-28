@@ -2,13 +2,12 @@ export function placeAuditPie(ratio, up, down) {
 	const auditPieChart = document.getElementById("audit-chart");
 	const svgNS = "http://www.w3.org/2000/svg";
 
+	// Necessary variables. Calculate circumference, the percentega of the
+	// audits received compared to total and the
 	const circumference = 628;
-
-	// Necessary variables.
 	const total = up + down;
 	const percentage = (down / total) * 100;
-	const oneFiveEightTotal = (circumference / 100) * percentage;
-	const strokeDashNumber = (total / 100) * percentage;
+	const strokeDashNumber = (circumference / 100) * percentage;
 
 	// Create the pie.
 	const pie = document.createElementNS(svgNS, "circle");
@@ -19,7 +18,7 @@ export function placeAuditPie(ratio, up, down) {
 	pie.style.strokeDasharray = 0 + " " + circumference;
 
 	// Make the colored section.
-	pie.style.strokeDasharray = `${oneFiveEightTotal}, ${circumference}`;
+	pie.style.strokeDasharray = `${strokeDashNumber}, ${circumference}`;
 
 	// Append.
 	auditPieChart.appendChild(pie);
