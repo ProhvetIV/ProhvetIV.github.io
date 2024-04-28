@@ -148,6 +148,10 @@ figcaption {
 /* Audit pie end */
 
 /* Progress chart */
+#progress-section {
+	width: 100%;
+}
+
 #progress {
 	width: 90%;
 	display: flex;
