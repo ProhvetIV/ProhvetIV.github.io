@@ -160,6 +160,7 @@ figcaption {
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0 20px 20px -6px rgba(109, 132, 175, 0.5);
+	overflow: auto;
 }
 
 #progress figcaption {
