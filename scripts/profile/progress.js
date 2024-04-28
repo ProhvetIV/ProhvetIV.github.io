@@ -91,6 +91,24 @@ function placeProgress(progress, xp) {
 		gridYtext.appendChild(xpText);
 	});
 
+	// Add XP text.
+	const justXPtext = document.createElementNS(svgNS, "text");
+	justXPtext.classList.add("justXPtext");
+	justXPtext.setAttributeNS(null, "x", 40);
+	justXPtext.setAttributeNS(null, "y", 280);
+	justXPtext.setAttributeNS(null, "text-anchor", "middle");
+	justXPtext.textContent = "XP";
+	gridYtext.appendChild(justXPtext);
+
+	// Add MONTHS text.
+	const justMONTHtext = document.createElementNS(svgNS, "text");
+	justMONTHtext.classList.add("justMONTHtext");
+	justMONTHtext.setAttributeNS(null, "x", 600);
+	justMONTHtext.setAttributeNS(null, "y", 540);
+	justMONTHtext.setAttributeNS(null, "text-anchor", "middle");
+	justMONTHtext.textContent = "MONTH";
+	gridXtext.appendChild(justMONTHtext);
+
 	// Coordinates array
 	const coordinatesArr = [];
 
@@ -146,8 +164,6 @@ function placeProgress(progress, xp) {
 		line.setAttributeNS(null, "fill", "rgb(121,0,121)");
 		lines.appendChild(line);
 	}
-
-	// Add bars for months
 
 	// Append everything in order.
 	progressChart.appendChild(gridX);
