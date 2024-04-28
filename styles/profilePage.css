@@ -151,6 +151,10 @@ figcaption {
 	box-shadow: 0 20px 20px -6px rgba(109, 132, 175, 0.5);
 }
 
+#progress figcaption {
+	margin-bottom: -50px;
+}
+
 .graph .labels.x-labels {
 	text-anchor: middle;
 }
