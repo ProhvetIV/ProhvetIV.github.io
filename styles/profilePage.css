@@ -110,6 +110,13 @@ main {
 }
 
 /* Audit pie chart */
+#audit-ratio {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 10vw;
+}
+
 #audit-chart {
 	margin: 0 auto;
 	transform: rotate(-90deg);
