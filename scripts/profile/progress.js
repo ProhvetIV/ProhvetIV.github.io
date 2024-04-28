@@ -66,7 +66,7 @@ function placeProgress(progress, xp) {
 	gridXtext.classList.add("labels", "y-labels");
 	const orderedMonths = orderMonths();
 	orderedMonths.forEach((month, index) => {
-		let x = index * 91 + 165;
+		let x = index * 85 + 165;
 		let y = 520;
 
 		const monthText = document.createElementNS(svgNS, "text");
