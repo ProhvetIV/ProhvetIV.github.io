@@ -5,6 +5,7 @@ export function placeAuditPie(ratio, up, down) {
 	// Necessary variables.
 	const total = up + down;
 	const percentage = (down / total) * 100;
+	const oneFiveEightTotal = (158 / 100) * percentage;
 	const strokeDashNumber = (total / 100) * percentage;
 
 	// Create the pie.
@@ -13,10 +14,10 @@ export function placeAuditPie(ratio, up, down) {
 	pie.setAttributeNS(null, "cx", 200);
 	pie.setAttributeNS(null, "cy", 200);
 	pie.setAttributeNS(null, "r", 100);
-	pie.style.strokeDasharray = 0 + " " + total;
+	pie.style.strokeDasharray = 0 + " " + 158;
 
 	// Make the colored section.
-	pie.style.strokeDasharray = `${strokeDashNumber}, ${total}`;
+	pie.style.strokeDasharray = `${oneFiveEightTotal}, ${158}`;
 
 	// Append.
 	auditPieChart.appendChild(pie);

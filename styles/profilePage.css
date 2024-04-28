@@ -122,7 +122,9 @@ main {
 .pie {
 	fill: #ddd;
 	stroke: red;
-	stroke-width: 200;
+	stroke-width: 100;
+	stroke-dasharray: 0 158;
+	transition: stroke-dasharray 0.3s ease;
 }
 
 figcaption {
@@ -180,7 +182,7 @@ figcaption {
 }
 
 .line {
-	stroke: black;
+	stroke: white;
 	stroke-width: 1.5;
 	fill: rgb(121, 0, 121);
 }
