@@ -11,8 +11,8 @@ export function placeAuditPie(ratio, up, down) {
 	// Create the pie.
 	const pie = document.createElementNS(svgNS, "circle");
 	pie.classList.add("pie");
-	pie.setAttributeNS(null, "cx", 200);
-	pie.setAttributeNS(null, "cy", 200);
+	pie.setAttributeNS(null, "cx", 100);
+	pie.setAttributeNS(null, "cy", 100);
 	pie.setAttributeNS(null, "r", 100);
 	pie.style.strokeDasharray = 0 + " " + 158;
 
