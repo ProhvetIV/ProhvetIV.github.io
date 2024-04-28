@@ -121,7 +121,7 @@ main {
 
 .pie {
 	fill: #ddd;
-	stroke: black;
+	stroke: red;
 	stroke-width: 200;
 	stroke-dasharray: 0 628;
 	transition: stroke-dasharray 0.3s ease;
@@ -166,7 +166,7 @@ figcaption {
 }
 
 .data {
-	fill: red;
+	fill: black;
 	stroke-width: 1;
 }
 
