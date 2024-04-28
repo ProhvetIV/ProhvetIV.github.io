@@ -122,8 +122,8 @@ main {
 .pie {
 	fill: #ddd;
 	stroke: red;
-	stroke-width: 100;
-	stroke-dasharray: 0 158;
+	stroke-width: 200;
+	stroke-dasharray: 0 628;
 	transition: stroke-dasharray 0.3s ease;
 }
 
