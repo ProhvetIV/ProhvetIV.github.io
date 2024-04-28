@@ -40,7 +40,7 @@ export function placeAuditPie(ratio, up, down) {
 		circle.setAttributeNS(null, "r", 5);
 
 		const text = document.createElementNS(svgNS, "texy");
-		text.setAttributeNS(null, "x", 400);
+		text.setAttributeNS(null, "x", 410);
 		text.setAttributeNS(null, "y", (i + 1) * 50 + 125);
 		text.textContent = arguments[i];
 
