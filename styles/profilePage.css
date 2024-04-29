@@ -208,14 +208,11 @@ figcaption {
 	width: 5px;
 	height: 5px;
 	border-radius: 50%;
+	background-color: red;
 }
 
 .fake-news:first-child {
-	background: greenyellow;
-}
-
-.fake-news:last-child {
-	background: red;
+	background-color: greenyellow;
 }
 
 /* Audit pie end */
