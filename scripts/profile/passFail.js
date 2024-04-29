@@ -16,7 +16,7 @@ function getPassFail(progress) {
 		const name = pathSplit[pathSplit.length - 1];
 
 		if (name.includes("24-01-2024")) {
-			const tempName = name.split("2024-");
+			const tempName = name.split("24-01-2024-");
 			name = tempName[tempName.length - 1];
 		}
 
