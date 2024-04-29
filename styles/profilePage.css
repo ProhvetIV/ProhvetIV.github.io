@@ -124,16 +124,20 @@ main {
 .xp-div {
 	height: 5vh;
 	width: 100%;
+	font-weight: bold;
 }
 
 .lv-div {
 	height: 15vh;
 	width: 100%;
+	font-size: 40;
+	font-weight: bold;
 }
 
 .module-div {
 	height: 5vh;
 	width: 100%;
+	font-weight: bold;
 }
 
 /* Audit pie chart */
