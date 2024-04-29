@@ -325,6 +325,7 @@ figcaption {
 
 .pass-fail-figcaption {
 	border-bottom: 1px solid black;
+	margin-bottom: -10px;
 }
 
 .fail-pass-figure {
