@@ -124,12 +124,18 @@ main {
 .xp-div {
 	height: 5vh;
 	width: 100%;
+}
+
+.module-xp {
 	font-weight: bold;
 }
 
 .lv-div {
 	height: 15vh;
 	width: 100%;
+}
+
+.module-lv {
 	font-size: 40;
 	font-weight: bold;
 }
@@ -137,6 +143,9 @@ main {
 .module-div {
 	height: 5vh;
 	width: 100%;
+}
+
+.module-name {
 	font-weight: bold;
 }
 
@@ -149,6 +158,7 @@ main {
 	align-items: center;
 	justify-content: center;
 	column-gap: 5vw;
+	border-radius: 10px;
 	box-shadow: 0px 0px 19px 7px rgba(0, 0, 0, 0.75);
 	background-color: transparent;
 }
