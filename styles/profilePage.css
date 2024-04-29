@@ -309,7 +309,8 @@ figcaption {
 	width: 100%;
 	display: flex;
 	align-items: flex-start;
-	justify-content: space-around;
+	justify-content: center;
+	column-gap: 5vw;
 }
 
 /* Fail charts */
