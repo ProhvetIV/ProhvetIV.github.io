@@ -174,7 +174,7 @@ main {
 }
 
 .pie {
-	fill: #ddd;
+	fill: greenyellow;
 	stroke: red;
 	stroke-width: 200;
 	stroke-dasharray: 0 628;
