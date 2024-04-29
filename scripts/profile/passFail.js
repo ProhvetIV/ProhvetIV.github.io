@@ -147,7 +147,7 @@ function createFailChart(piscine, chartName) {
 	failsText.textContent = "FAILS";
 
 	const ratioText = document.createElementNS(svgNS, "text");
-	ratioText.setAttributeNS(null, "x", 480);
+	ratioText.setAttributeNS(null, "x", 500);
 	ratioText.setAttributeNS(null, "y", 8);
 	ratioText.setAttributeNS(null, "dy", ".35em");
 	ratioText.textContent = "RATIO";
@@ -202,7 +202,7 @@ function createFailChart(piscine, chartName) {
 		ftext.textContent = `${fails}`;
 
 		const rtext = document.createElementNS(svgNS, "text");
-		rtext.setAttributeNS(null, "x", 480);
+		rtext.setAttributeNS(null, "x", 500);
 		rtext.setAttributeNS(null, "y", counter * 20 + 28);
 		rtext.setAttributeNS(null, "dy", ".35em");
 		rtext.textContent = `${ratio}`;
