@@ -202,6 +202,7 @@ figcaption {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	column-gap: 10px;
 }
 
 .fake-news {
@@ -211,7 +212,7 @@ figcaption {
 	background-color: red;
 }
 
-.fake-news:first {
+.green {
 	background-color: greenyellow;
 }
 
