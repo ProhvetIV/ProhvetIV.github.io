@@ -1,4 +1,4 @@
-const modules = ["DIV-01", "PISCINE-GO", "PISCINE-JS"];
+const modules = ["DIV-01", "PISCINE GO", "PISCINE JS"];
 
 // Display the name of the user.
 function placeName(name) {
