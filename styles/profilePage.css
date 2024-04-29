@@ -211,7 +211,7 @@ figcaption {
 	background-color: red;
 }
 
-.fake-news:first-child {
+.fake-news:first {
 	background-color: greenyellow;
 }
 
