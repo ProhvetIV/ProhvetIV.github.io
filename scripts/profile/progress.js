@@ -56,7 +56,7 @@ function placeProgress(progress, xp) {
 	gridY.classList.add("grid", "y-grid");
 	lineY.setAttributeNS(null, "x1", 120);
 	lineY.setAttributeNS(null, "y1", 500);
-	lineY.setAttributeNS(null, "x2", 1200);
+	lineY.setAttributeNS(null, "x2", 1130);
 	lineY.setAttributeNS(null, "y2", 500);
 
 	// Add months.
