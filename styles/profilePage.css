@@ -289,7 +289,7 @@ figcaption {
 .axeText {
 	transition: max-height 0.3s ease;
 	font-size: 0;
-	color: black;
+	fill: black;
 	overflow: hidden;
 }
 
