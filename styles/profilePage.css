@@ -195,6 +195,10 @@ figcaption {
 	text-align: center;
 }
 
+.legend {
+	display: flex;
+}
+
 /* Audit pie end */
 
 /* Progress chart */

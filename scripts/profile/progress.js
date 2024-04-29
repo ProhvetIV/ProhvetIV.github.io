@@ -98,6 +98,7 @@ function placeProgress(progress, xp) {
 	justXPtext.setAttributeNS(null, "y", 280);
 	justXPtext.setAttributeNS(null, "text-anchor", "middle");
 	justXPtext.textContent = "XP";
+	justXPtext.style.fontWeight = "bold";
 	gridYtext.appendChild(justXPtext);
 
 	// Add MONTHS text.
@@ -107,6 +108,7 @@ function placeProgress(progress, xp) {
 	justMONTHtext.setAttributeNS(null, "y", 560);
 	justMONTHtext.setAttributeNS(null, "text-anchor", "middle");
 	justMONTHtext.textContent = "MONTH";
+	justMONTHtext.style.fontWeight = "bold";
 	gridXtext.appendChild(justMONTHtext);
 
 	// Coordinates array
