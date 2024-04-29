@@ -12,7 +12,7 @@ function placeAudit(ratio, up, down) {
 	const auditUp = document.getElementById("up");
 	const auditDown = document.getElementById("down");
 
-	auditRatio.textContent = ratio;
+	auditRatio.textContent = ratio.toFixed(2);
 	auditUp.textContent = up;
 	auditDown.textContent = down;
 }
