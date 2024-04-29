@@ -22,36 +22,36 @@ function placeLv(lvObj) {
 	const displays = [...document.querySelectorAll(".xp-display")];
 
 	for (let i = 0; i < displays.length; i++) {
-		const div = document.createElement("div");
-		if (i === 0) {
-			div.classList.add("xp-div");
-		}
-		if (i === 1) {
-			div.classList.add("lv-div");
-		}
-		if (i === 2) {
-			div.classList.add("module-div");
-		}
+		const xpDiv = document.createElement("div");
+		const lvDiv = document.createElement("div");
+		const moDiv = document.createElement("div");
+		xpDiv.classList.add("xp-div");
+		lvDiv.classList.add("lv-div");
+		moDiv.classList.add("module-div");
 
-		const numbers = document.createElement("span");
-		numbers.textContent = lvObj[i];
-		numbers.classList.add("module-lv");
+		const moduleLv = document.createElement("span");
+		moduleLv.textContent = lvObj[i];
+		moduleLv.classList.add("module-lv");
+
 		const moduleName = document.createElement("span");
 		moduleName.textContent = modules[i];
 		moduleName.classList.add("module-name");
+
 		const xpText = document.createElement("span");
 		xpText.classList.add("module-xp");
 
-		div.appendChild(moduleName);
-		div.appendChild(numbers);
-		div.appendChild(xpText);
-		displays[i].appendChild(div);
+		xpDiv.appendChild(moduleName);
+		lvDiv.appendChild(moduleLv);
+		moDiv.appendChild(xpText);
+		displays[i].appendChild(xpDiv);
+		displays[i].appendChild(lvDiv);
+		displays[i].appendChild(moDiv);
 	}
 }
 
 // Display the xp number.
 function placeXP(div01, go, js) {
-	const xpEls = [...document.querySelectorAll(".xp")];
+	const xpEls = [...document.querySelectorAll(".module-xp")];
 	const arr = [div01, go, js];
 
 	for (let i = 0; i < xpEls.length; i++) {
