@@ -15,6 +15,11 @@ function getPassFail(progress) {
 		const pathSplit = go[i].path.split("/");
 		const name = pathSplit[pathSplit.length - 1];
 
+		if (name.includes("2024")) {
+			const tempName = name.split("2024-");
+			name = tempName[tempName.length - 1];
+		}
+
 		if (!Object.keys(goExercises).includes(name)) {
 			goExercises[name] = {
 				pass: 0,
