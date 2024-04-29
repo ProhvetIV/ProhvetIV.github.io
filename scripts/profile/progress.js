@@ -136,7 +136,7 @@ function placeProgress(progress, xp) {
 		axe.classList.add("axe");
 		axe.setAttributeNS(null, "cx", x);
 		axe.setAttributeNS(null, "cy", y);
-		axe.setAttributeNS(null, "r", 2);
+		axe.setAttributeNS(null, "r", 4);
 		axes.appendChild(axe);
 
 		const axeText = document.createElementNS(svgNS, "text");
