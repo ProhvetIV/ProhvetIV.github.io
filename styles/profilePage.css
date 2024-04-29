@@ -270,7 +270,7 @@ figcaption {
 /* Fail charts */
 .pass-fail-div {
 	height: 500px;
-	background-color: white;
+	background: radial-gradient(circle, rgba(240, 242, 242, 1) 0%, rgba(129, 123, 223, 1) 100%, rgba(172, 142, 214, 1) 100%);
 	padding: 10px;
 	border: 1px solid black;
 	border-radius: 10px;
