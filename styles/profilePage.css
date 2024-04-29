@@ -114,6 +114,12 @@ main {
 	justify-content: center;
 }
 
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .xp-div {
 	height: 5vh;
 	width: 100%;

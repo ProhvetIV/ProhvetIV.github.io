@@ -25,9 +25,9 @@ function placeLv(lvObj) {
 		const xpDiv = document.createElement("div");
 		const lvDiv = document.createElement("div");
 		const moDiv = document.createElement("div");
-		xpDiv.classList.add("xp-div");
-		lvDiv.classList.add("lv-div");
-		moDiv.classList.add("module-div");
+		xpDiv.classList.add("xp-div", "flex");
+		lvDiv.classList.add("lv-div", "flex");
+		moDiv.classList.add("module-div", "flex");
 
 		const moduleLv = document.createElement("span");
 		moduleLv.textContent = lvObj[i];
