@@ -114,6 +114,21 @@ main {
 	justify-content: center;
 }
 
+.xp-div {
+	height: 5vh;
+	width: 100%;
+}
+
+.lv-div {
+	height: 15vh;
+	width: 100%;
+}
+
+.module-div {
+	height: 5vh;
+	width: 100%;
+}
+
 /* Audit pie chart */
 #audit-ratio {
 	display: flex;

@@ -22,18 +22,30 @@ function placeLv(lvObj) {
 	const displays = [...document.querySelectorAll(".xp-display")];
 
 	for (let i = 0; i < displays.length; i++) {
+		const div = document.createElement("div");
+		if (i === 0) {
+			div.classList.add("xp-div");
+		}
+		if (i === 1) {
+			div.classList.add("lv-div");
+		}
+		if (i === 2) {
+			div.classList.add("module-div");
+		}
+
 		const numbers = document.createElement("span");
 		numbers.textContent = lvObj[i];
-		numbers.id = modules[i] + "-lv";
+		moduleName.classList.add("module-lv");
 		const moduleName = document.createElement("span");
 		moduleName.textContent = modules[i];
-		moduleName.id = modules[i] + "-lv-text";
+		moduleName.classList.add("module-name");
 		const xpText = document.createElement("span");
-		xpText.classList.add("xp");
+		xpText.classList.add("module-xp");
 
-		displays[i].appendChild(numbers);
-		displays[i].appendChild(xpText);
-		displays[i].appendChild(moduleName);
+		div.appendChild(moduleName);
+		div.appendChild(numbers);
+		div.appendChild(xpText);
+		displays[i].appendChild(div);
 	}
 }
 
