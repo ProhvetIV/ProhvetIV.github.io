@@ -204,6 +204,18 @@ figcaption {
 	justify-content: center;
 }
 
+.fake-news {
+	border-radius: 50%;
+}
+
+.fake-news:first-child {
+	background: greenyellow;
+}
+
+.fake-news:last-child {
+	background: red;
+}
+
 /* Audit pie end */
 
 /* Progress chart */
