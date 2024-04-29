@@ -112,6 +112,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	background: radial-gradient(circle, rgba(240, 242, 242, 1) 0%, rgba(129, 123, 223, 1) 100%, rgba(172, 142, 214, 1) 100%);
 }
 
 .flex {
