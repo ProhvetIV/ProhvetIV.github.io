@@ -298,7 +298,7 @@ figcaption {
 }
 
 .line {
-	stroke: white;
+	stroke: #ccc;
 	stroke-width: 1.5;
 	fill: rgb(121, 0, 121);
 }
