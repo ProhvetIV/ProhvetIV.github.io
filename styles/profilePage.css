@@ -150,11 +150,14 @@ figcaption {
 /* Progress chart */
 #progress-section {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 #progress {
 	width: 90%;
-	min-width: 1400;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

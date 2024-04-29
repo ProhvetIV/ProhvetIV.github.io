@@ -56,7 +56,7 @@ function placeProgress(progress, xp) {
 	gridY.classList.add("grid", "y-grid");
 	lineY.setAttributeNS(null, "x1", 120);
 	lineY.setAttributeNS(null, "y1", 500);
-	lineY.setAttributeNS(null, "x2", 1260);
+	lineY.setAttributeNS(null, "x2", 1200);
 	lineY.setAttributeNS(null, "y2", 500);
 
 	// Add months.
@@ -66,7 +66,7 @@ function placeProgress(progress, xp) {
 	gridXtext.classList.add("labels", "y-labels");
 	const orderedMonths = orderMonths();
 	orderedMonths.forEach((month, index) => {
-		let x = index * 85 + 165;
+		let x = index * 83 + 165;
 		let y = 520;
 
 		const monthText = document.createElementNS(svgNS, "text");
@@ -94,7 +94,7 @@ function placeProgress(progress, xp) {
 	// Add XP text.
 	const justXPtext = document.createElementNS(svgNS, "text");
 	justXPtext.classList.add("justXPtext");
-	justXPtext.setAttributeNS(null, "x", 40);
+	justXPtext.setAttributeNS(null, "x", 20);
 	justXPtext.setAttributeNS(null, "y", 280);
 	justXPtext.setAttributeNS(null, "text-anchor", "middle");
 	justXPtext.textContent = "XP";
@@ -103,8 +103,8 @@ function placeProgress(progress, xp) {
 	// Add MONTHS text.
 	const justMONTHtext = document.createElementNS(svgNS, "text");
 	justMONTHtext.classList.add("justMONTHtext");
-	justMONTHtext.setAttributeNS(null, "x", 600);
-	justMONTHtext.setAttributeNS(null, "y", 540);
+	justMONTHtext.setAttributeNS(null, "x", 610);
+	justMONTHtext.setAttributeNS(null, "y", 560);
 	justMONTHtext.setAttributeNS(null, "text-anchor", "middle");
 	justMONTHtext.textContent = "MONTH";
 	gridXtext.appendChild(justMONTHtext);
