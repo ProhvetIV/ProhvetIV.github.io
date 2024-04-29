@@ -133,6 +133,8 @@ main {
 .lv-div {
 	height: 15vh;
 	width: 100%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
 .module-lv {
