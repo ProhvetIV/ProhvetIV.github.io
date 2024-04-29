@@ -239,6 +239,7 @@ figcaption {
 
 /* Pass/Fail ratio */
 #pass-fail {
+	width: 100%;
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-around;
@@ -247,7 +248,6 @@ figcaption {
 /* Fail charts */
 .pass-fail-div {
 	height: 500px;
-	width: 550px;
 	background-color: white;
 	padding: 10px;
 	border: 1px solid black;
