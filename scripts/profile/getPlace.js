@@ -35,7 +35,7 @@ function placeLv(lvObj) {
 
 		const numbers = document.createElement("span");
 		numbers.textContent = lvObj[i];
-		moduleName.classList.add("module-lv");
+		numbers.classList.add("module-lv");
 		const moduleName = document.createElement("span");
 		moduleName.textContent = modules[i];
 		moduleName.classList.add("module-name");
