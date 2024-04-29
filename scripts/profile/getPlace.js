@@ -55,7 +55,7 @@ function placeXP(div01, go, js) {
 	const arr = [div01, go, js];
 
 	for (let i = 0; i < xpEls.length; i++) {
-		xpEls[i].textContent = "XP:" + arr[i];
+		xpEls[i].textContent = "XP:" + arr[i].toFixed(2);
 	}
 }
 
