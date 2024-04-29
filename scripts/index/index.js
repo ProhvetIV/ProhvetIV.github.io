@@ -23,8 +23,6 @@ export async function login() {
 
 		if (!response.ok) {
 			alert("Wrong username or password");
-			console.log("Failed response: ", response);
-			throw new Error("Failed to fetch data");
 		}
 
 		// Successful fetching
@@ -34,7 +32,7 @@ export async function login() {
 			window.location.href = "profile.html";
 		}
 	} catch (error) {
-		console.log("Failed to fetch from kood/jõhvi: ", error);
+		console.log("Failed to fetch from kood/jõhvi");
 	}
 }
 
