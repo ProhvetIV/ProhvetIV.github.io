@@ -213,6 +213,10 @@ figcaption {
 	column-gap: 10px;
 }
 
+.space {
+	margin-top: 10px;
+}
+
 .fake-news {
 	width: 10px;
 	height: 10px;
