@@ -287,6 +287,7 @@ figcaption {
 }
 
 .axeText {
+	z-index: 9999;
 	transition: max-height 0.3s ease;
 	font-size: 0;
 	fill: black;
