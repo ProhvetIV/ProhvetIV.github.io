@@ -135,19 +135,19 @@ function createFailChart(piscine, chartName) {
 	headerBar.classList.add("headerBar");
 
 	const nameText = document.createElementNS(svgNS, "text");
-	nameText.setAttributeNS(null, "x", 1);
+	nameText.setAttributeNS(null, "x", 10);
 	nameText.setAttributeNS(null, "y", 8);
 	nameText.setAttributeNS(null, "dy", ".35em");
 	nameText.textContent = "EXERCISE";
 
 	const failsText = document.createElementNS(svgNS, "text");
-	failsText.setAttributeNS(null, "x", 200);
+	failsText.setAttributeNS(null, "x", 250);
 	failsText.setAttributeNS(null, "y", 8);
 	failsText.setAttributeNS(null, "dy", ".35em");
 	failsText.textContent = "FAILS";
 
 	const ratioText = document.createElementNS(svgNS, "text");
-	ratioText.setAttributeNS(null, "x", 440);
+	ratioText.setAttributeNS(null, "x", 480);
 	ratioText.setAttributeNS(null, "y", 8);
 	ratioText.setAttributeNS(null, "dy", ".35em");
 	ratioText.textContent = "RATIO";
@@ -184,25 +184,25 @@ function createFailChart(piscine, chartName) {
 		bar.classList.add("bar");
 
 		const text = document.createElementNS(svgNS, "text");
-		text.setAttributeNS(null, "x", 1);
+		text.setAttributeNS(null, "x", 10);
 		text.setAttributeNS(null, "y", counter * 20 + 28);
 		text.setAttributeNS(null, "dy", ".35em");
 		text.textContent = `${key}`;
 
 		const rect = document.createElementNS(svgNS, "rect");
-		rect.setAttributeNS(null, "x", 200);
+		rect.setAttributeNS(null, "x", 250);
 		rect.setAttributeNS(null, "width", x + 2);
 		rect.setAttributeNS(null, "height", 18);
 		rect.setAttributeNS(null, "y", counter * 20 + 20);
 
 		const ftext = document.createElementNS(svgNS, "text");
-		ftext.setAttributeNS(null, "x", 205 + x);
+		ftext.setAttributeNS(null, "x", 255 + x);
 		ftext.setAttributeNS(null, "y", counter * 20 + 28);
 		ftext.setAttributeNS(null, "dy", ".35em");
 		ftext.textContent = `${fails}`;
 
 		const rtext = document.createElementNS(svgNS, "text");
-		rtext.setAttributeNS(null, "x", 440);
+		rtext.setAttributeNS(null, "x", 480);
 		rtext.setAttributeNS(null, "y", counter * 20 + 28);
 		rtext.setAttributeNS(null, "dy", ".35em");
 		rtext.textContent = `${ratio}`;
