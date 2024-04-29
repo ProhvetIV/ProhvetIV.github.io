@@ -322,6 +322,10 @@ figcaption {
 	overflow: auto;
 }
 
+.pass-fail-figcaption {
+	border-bottom: 1px solid black;
+}
+
 .fail-pass-figure {
 	padding: 10px;
 }

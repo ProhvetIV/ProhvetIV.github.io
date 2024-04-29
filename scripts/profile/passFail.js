@@ -13,7 +13,7 @@ function getPassFail(progress) {
 	const goExercises = {};
 	for (let i = 0; i < go.length; i++) {
 		const pathSplit = go[i].path.split("/");
-		const name = pathSplit[pathSplit.length - 1];
+		let name = pathSplit[pathSplit.length - 1];
 
 		if (name.includes("24-01-2024")) {
 			const tempName = name.split("24-01-2024-");
@@ -68,8 +68,6 @@ function getPassFail(progress) {
 function placePassFailRatio(go, js) {
 	const goPassFail = document.getElementById("go-pass-fail");
 	const jsPassFail = document.getElementById("js-pass-fail");
-
-	// Create charts for fails.
 
 	// Create tables for ratio.
 	const goTable = document.createElement("table");
