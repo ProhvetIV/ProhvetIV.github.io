@@ -22,6 +22,7 @@ export async function login() {
 		});
 
 		if (!response.ok) {
+			alert("Wrong username or password");
 			console.log("Failed response: ", response);
 			throw new Error("Failed to fetch data");
 		}
