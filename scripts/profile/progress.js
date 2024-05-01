@@ -127,7 +127,7 @@ function placeProgress(progress, xp) {
 
 		cumulativeXP += exercise.amount;
 
-		const x = (364 - (today - past) / (1000 * 60 * 60 * 24)) * 2.7 + 143;
+		const x = (364 - (today - past) / (1000 * 60 * 60 * 24)) * 2.7 + 43;
 		const yPercentage = (cumulativeXP / xp) * 100;
 		const y = 500 - (400 / 100) * yPercentage;
 
