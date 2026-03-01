@@ -26,6 +26,7 @@ export async function checkWebshopReadyness() {
 		// Successful fetching
 		if (response.ok) {
 			const responseData = await response.json();
+			console.log(responseData);
 		}
 	} catch (error) {
 		console.log("Failed to fetch from render backend");
@@ -35,7 +36,7 @@ export async function checkWebshopReadyness() {
 
 export function addListeners() {
 	const submit = document.getElementById("submit");
-	submit.addEventListener("click", () => login());
+	submit.addEventListener("click", () => checkWebshopReadyness());
 	window.addEventListener("keydown", (e) => {
 		if (e.key == "Enter") {
 			checkWebshopReadyness();

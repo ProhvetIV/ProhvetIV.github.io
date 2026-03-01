@@ -11,17 +11,19 @@
 		<main class="flex">
 			<section id="main-section" class="flex">
 				<h1>ERPLY</h1>
-				<form id="readyness-from" class="flex">
-					<input id="clientCode" type="number" class="input-text" placeholder="Client Code" required />
-					<input id="username" type="text" class="input-text" placeholder="Username" required />
-					<input id="password" type="password" class="input-text" placeholder="Password" required />
+				<form id="readyness-form" class="flex">
+					<div id="credentials">
+						<input id="clientCode" type="number" class="input-text" placeholder="Client Code" required />
+						<input id="username" type="text" class="input-text" placeholder="Username" required />
+						<input id="password" type="password" class="input-text" placeholder="Password" required />
+					</div>
 					<input id="codes" type="text" class="input-text" placeholder="Codes" required />
 					<input id="submit" type="button" value="SUBMIT" />
 				</form>
 			</section>
 		</main>
 		<script type="module">
-			import { login, addListeners } from "./scripts/index/index.js";
+			import { checkWebshopReadyness, addListeners } from "./scripts/index.js";
 			addListeners();
 		</script>
 	</body>

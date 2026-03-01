@@ -26,10 +26,11 @@ main {
 }
 
 #main-section {
-	height: 60vh;
-	width: 35vw;
+	height: auto;
+	width: auto;
 	background-color: rgba(0, 0, 0, 0.25);
 	border-radius: 20px;
+	padding: 20px;
 }
 
 .flex {
@@ -40,18 +41,34 @@ main {
 	row-gap: 2rem;
 }
 
+#credentials {
+	display: flex;
+	flex-direction: row;
+	column-gap: 1rem;
+	justify-content: space-between;
+	width: 100%;
+}
+
+#credentials > input {
+	min-width: 200px;
+}
+
 h1 {
 	color: white;
 }
 
-#readyness-from {
-	width: 70%;
+#readyness-form {
+	width: 100%;
 }
 
 .input-text {
 	padding: 1rem;
-	width: 100%;
 	border-radius: 10px;
+}
+
+#codes {
+	text-align: center;
+	width: 100%;
 }
 
 input[type="button"] {
