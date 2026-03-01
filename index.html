@@ -5,25 +5,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles/index.css" />
 		<link rel="icon" type="image/x-icon" href="./icons/favicon.ico" />
-		<title>Login</title>
+		<title>Webshop Readyness</title>
 	</head>
 	<body class="flex">
 		<main class="flex">
 			<section id="login" class="flex">
 				<h1>LOGIN</h1>
 				<form id="login-form" class="flex">
-					<input id="email-or-username" type="text" class="input-text" placeholder="Email or Username" required />
+					<input id="clientCode" type="number" class="input-text" placeholder="Client Code" required />
+					<input id="username" type="text" class="input-text" placeholder="Username" required />
 					<input id="password" type="password" class="input-text" placeholder="Password" required />
-					<input id="login-submit" type="button" value="LOGIN" />
+					<input id="codes" type="text" class="input-text" placeholder="Codes" required />
+					<input id="submit" type="button" value="SUBMIT" />
 				</form>
 			</section>
 		</main>
 		<script type="module">
-			import { login } from "./scripts/index/index.js";
-			import { addListeners } from "./scripts/index/listeners.js";
-			import { checkSessionExpiration, loginTokenCheck } from "./scripts/sessions.js";
-
-			loginTokenCheck();
+			import { login, addListeners } from "./scripts/index/index.js";
 			addListeners();
 		</script>
 	</body>

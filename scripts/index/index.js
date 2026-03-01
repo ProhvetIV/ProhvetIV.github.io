@@ -1,82 +1,44 @@
-import { createSessions } from "../sessions.js";
-
-// Login function to fetch the signin JWT.
-export async function login() {
-	const emailOrUsername = document.getElementById("email-or-username").value;
+export async function checkWebshopReadyness() {
+	const clientCode = document.getElementById("clientCode").value;
+	const username = document.getElementById("username").value;
 	const password = document.getElementById("password").value;
-
-	// Get query and creds for the GraphQL request.
-	// Encrypt credentials.
-	const { query, creds } = getQueryAndCreds(emailOrUsername, password);
-	const userCredentials = encrypt(emailOrUsername + ":" + password); //+ ":" + encrypt(password);
+	const codes = document.getElementById("codes").value;
 
 	// Fetch the data.
 	try {
-		const response = await fetch("https://01.kood.tech/api/auth/signin", {
+		const response = await fetch("http://127.0.0.1:8000/api/check", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
-				Authorization: "Basic " + userCredentials,
 			},
-			body: JSON.stringify({ query, creds }),
+			body: JSON.stringify({
+				client_code: clientCode,
+				username: username,
+				password: password,
+				codes: codes,
+			}),
 		});
 
 		if (!response.ok) {
-			alert("Wrong username or password");
+			alert("bad input data");
 		}
 
 		// Successful fetching
 		if (response.ok) {
 			const responseData = await response.json();
-			createSessions(responseData);
-			window.location.href = "profile.html";
 		}
 	} catch (error) {
-		console.log("Failed to fetch from kood/jõhvi");
+		console.log("Failed to fetch from render backend");
 	}
 }
 
-// Encrypt data for transfer to GraphQL endpoint. Base64.
-function encrypt(input) {
-	const encryptedPW = btoa(input);
-	return encryptedPW;
-}
 
-// Checks whether input is an email type.
-function emailValidation(email) {
-	const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-	return regex.test(email);
-}
-
-// Make the query string and differentiate between email and username.
-function getQueryAndCreds(emailOrUsername, password) {
-	// Query when user inputs email and password.
-	if (emailValidation(emailOrUsername)) {
-		let creds = {
-			email: emailOrUsername,
-			password: password,
-		};
-		let query = `
-			mutation signin($email: String!, $password: String!) {
-				signin(email: $email, password: $password) {
-					token
-				}
-			}
-		`;
-		return { query, creds };
-	}
-
-	// Query when user inputs username and password.
-	let creds = {
-		username: emailOrUsername,
-		password: password,
-	};
-	let query = `
-		mutation signin($username: String!, $password: String!) {
-			signin(username: $username, password: $password) {
-				token
-			}
+export function addListeners() {
+	const submit = document.getElementById("submit");
+	submit.addEventListener("click", () => login());
+	window.addEventListener("keydown", (e) => {
+		if (e.key == "Enter") {
+			checkWebshopReadyness();
 		}
-	`;
-	return { query, creds };
+	});
 }
